@@ -1,6 +1,10 @@
 // TO MAKE THE MAP APPEAR YOU MUST
 // ADD YOUR ACCESS TOKEN FROM
 // https://account.mapbox.com
+
+const imageSrc =
+  "https://media.istockphoto.com/id/511061090/photo/business-office-building-in-london-england.jpg?s=612x612&w=0&k=20&c=nYAn4JKoCqO1hMTjZiND1PAIWoABuy1BwH1MhaEoG6w=";
+
 mapboxgl.accessToken =
   "pk.eyJ1Ijoib25lcGVhY2UiLCJhIjoiY2t1eHUxMmpiMGhxaTJucXFjd2k5ZjE2OSJ9.MwH_NiqfqOlyMU3j50Z1dw";
 
@@ -135,7 +139,18 @@ map.on("load", () => {
 
     new mapboxgl.Popup()
       .setLngLat(coordinates)
-      .setHTML(`<strong>${title}</strong>`)
+      .setHTML(
+        `    <div>
+      <h2>Mafia club #1</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+      <img
+        height="200"
+        width="200"
+        src="${imageSrc}"
+        alt=""
+      />
+    </div>`
+      )
       .addTo(map);
   });
 
