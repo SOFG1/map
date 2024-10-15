@@ -11,23 +11,14 @@
       href="https://api.mapbox.com/mapbox-gl-js/v3.7.0/mapbox-gl.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
     <script src="https://api.mapbox.com/mapbox-gl-js/v3.7.0/mapbox-gl.js"></script>
   </head>
   <body>
-    <div id="map"></div>
-
-    <!-- popup -->
-    <div>
-      <h2>Title</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-      <img
-        height="200"
-        width="200"
-        src="https://media.istockphoto.com/id/511061090/photo/business-office-building-in-london-england.jpg?s=612x612&w=0&k=20&c=nYAn4JKoCqO1hMTjZiND1PAIWoABuy1BwH1MhaEoG6w="
-        alt=""
-      />
-    </div>
+    <div id="map" style="height: 700px; width: 100%"></div>
   </body>
-  <script src="./index.js"></script>
+  <script src="./setup.js" type="module"></script>
+  <script src="./load.js" type="module"></script>
+  <script src="./index.js" type="module"></script>
+  <script src="./cursor.js" type="module"></script>
+  <script src="./popup.js" type="module"></script>
 </html>
