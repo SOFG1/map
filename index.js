@@ -1,6 +1,14 @@
 await waitForLoad();
 
-// Add a new source from our GeoJSON data with clustering enabled
+map.getStyle().layers.forEach(function (layer) {
+  // Check for road-related text layers, which usually have 'road' and 'label' in their IDs
+  if (layer.id.includes("road") && layer.type === "symbol") {
+    // Hide the layer by setting its visibility to 'none'
+    map.setLayoutProperty(layer.id, "visibility", "none");
+  }
+});
+
+// Data
 map.addSource("points", {
   type: "geojson",
   data: {
@@ -43,7 +51,7 @@ map.addSource("points", {
   clusterRadius: 50, // Radius of each cluster when clustering points (defaults to 50)
 });
 
-// Add a layer for the clusters
+// Cluster
 map.addLayer({
   id: "clusters",
   type: "circle",
@@ -63,7 +71,7 @@ map.addLayer({
   },
 });
 
-// Add a layer for the cluster count (the number displayed on each cluster)
+// Cluster count text
 map.addLayer({
   id: "cluster-count",
   type: "symbol",
@@ -76,21 +84,22 @@ map.addLayer({
   },
 });
 
-// Add a layer for the individual unclustered points
+// Points
 map.addLayer({
   id: "unclustered-point",
-  type: "circle",
+  type: "symbol",
   source: "points",
-  filter: ["!", ["has", "point_count"]],
-  paint: {
-    "circle-color": "#FF0000",
-    "circle-radius": 8,
-    "circle-stroke-width": 1,
-    "circle-stroke-color": "#fff",
+  layout: {
+    "icon-image": "pin2",
+    // get the title name from the source's "title" property
+    // "text-field": ["get", "title"],
+    // "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+    // "text-offset": [0, 1.25],
+    // "text-anchor": "top",
   },
 });
 
-// Inspect a cluster on click
+// Zoom in cluster
 map.on("click", "clusters", (e) => {
   const features = map.queryRenderedFeatures(e.point, {
     layers: ["clusters"],

@@ -1,18 +1,16 @@
 body {
   box-sizing: border-box;
-}
-
-h1 {
-  margin-bottom: 100px;
+  padding: 0;
+  margin: 0;
 }
 #map {
-  height: 650px;
-  max-width: 1500px;
-  margin: 0 auto;
+  height: 100vh;
+  width: 100vw;
 }
 
-.mapboxgl-map {
-  overflow: visible !important;
+.mapboxgl-popup {
+  max-width: 300px !important;
+  padding-bottom: 40px;
 }
 
 .mapboxgl-popup-content {
@@ -88,7 +86,7 @@ h1 {
   font-size: 12px;
   line-height: 1.2;
   border-radius: 6px;
-  margin: 0 7px 7px;
+  margin: 7px;
   text-align: center;
   padding: 3px;
 }
