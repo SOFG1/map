@@ -22,6 +22,7 @@ map.addSource("points", {
         },
         properties: {
           title: "Point 1",
+          pin: "pin2",
         },
       },
       {
@@ -32,6 +33,7 @@ map.addSource("points", {
         },
         properties: {
           title: "Point 2",
+          pin: "pin1",
         },
       },
       {
@@ -42,6 +44,7 @@ map.addSource("points", {
         },
         properties: {
           title: "Point 3",
+          pin: "pin2",
         },
       },
     ],
@@ -54,7 +57,7 @@ map.addLayer({
   type: "symbol",
   source: "points",
   layout: {
-    "icon-image": "pin2",
+    "icon-image": ["get", "pin"],
   },
 });
 
