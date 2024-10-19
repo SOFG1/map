@@ -1,5 +1,37 @@
 await waitForLoad();
 
+// Add building layers with 3D extrusion if not already present
+map.addLayer({
+  id: "3d-buildings",
+  source: "composite",
+  "source-layer": "building",
+  filter: ["==", "extrude", "true"],
+  type: "fill-extrusion",
+  minzoom: 15,
+  paint: {
+    "fill-extrusion-color": "#aaa", // Default building color
+    "fill-extrusion-height": [
+      "interpolate",
+      ["linear"],
+      ["zoom"],
+      15,
+      0,
+      15.05,
+      ["get", "height"],
+    ],
+    "fill-extrusion-base": [
+      "interpolate",
+      ["linear"],
+      ["zoom"],
+      15,
+      0,
+      15.05,
+      ["get", "min_height"],
+    ],
+    "fill-extrusion-opacity": 0.6,
+  },
+});
+
 map.getStyle().layers.forEach(function (layer) {
   // Check for road-related text layers, which usually have 'road' and 'label' in their IDs
   if (layer.id.includes("road") && layer.type === "symbol") {
@@ -18,7 +50,7 @@ map.addSource("points", {
         type: "Feature",
         geometry: {
           type: "Point",
-          coordinates: [30.45, 50.45],
+          coordinates: [30.440631987769308, 50.459191771660386],
         },
         properties: {
           title: "Point 1",
