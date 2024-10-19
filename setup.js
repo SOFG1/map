@@ -17,4 +17,11 @@ map.on("load", () => {
 
 map.addControl(new mapboxgl.NavigationControl());
 
+map.addControl(
+  new MapboxDirections({
+    accessToken: mapboxgl.accessToken,
+  }),
+  "top-left"
+);
+
 window.map = map;

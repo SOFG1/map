@@ -1,30 +1,5 @@
 await waitForLoad();
 
-// Add building layers with 3D extrusion if not already present
-map.addLayer({
-  id: "3d-buildings",
-  source: "composite",
-  "source-layer": "building",
-  type: "fill-extrusion",
-  layout: {
-    visibility: "visible",
-  },
-  paint: {
-    "fill-extrusion-color": "#aaa",
-    "fill-extrusion-height": ["get", "height"],
-    "fill-extrusion-base": 0,
-    "fill-extrusion-opacity": 0.8,
-  },
-});
-
-map.getStyle().layers.forEach(function (layer) {
-  // Check for road-related text layers, which usually have 'road' and 'label' in their IDs
-  if (layer.id.includes("road") && layer.type === "symbol") {
-    // Hide the layer by setting its visibility to 'none'
-    map.setLayoutProperty(layer.id, "visibility", "none");
-  }
-});
-
 // Data
 map.addSource("points", {
   type: "geojson",
@@ -78,18 +53,18 @@ map.addLayer({
   },
 });
 
-// Zoom in cluster
-map.on("click", "clusters", (e) => {
-  const features = map.queryRenderedFeatures(e.point, {
-    layers: ["clusters"],
-  });
-  const clusterId = features[0].properties.cluster_id;
-  map.getSource("points").getClusterExpansionZoom(clusterId, (err, zoom) => {
-    if (err) return;
+// // Zoom in cluster
+// map.on("click", "clusters", (e) => {
+//   const features = map.queryRenderedFeatures(e.point, {
+//     layers: ["clusters"],
+//   });
+//   const clusterId = features[0].properties.cluster_id;
+//   map.getSource("points").getClusterExpansionZoom(clusterId, (err, zoom) => {
+//     if (err) return;
 
-    map.easeTo({
-      center: features[0].geometry.coordinates,
-      zoom: zoom,
-    });
-  });
-});
+//     map.easeTo({
+//       center: features[0].geometry.coordinates,
+//       zoom: zoom,
+//     });
+//   });
+// });
