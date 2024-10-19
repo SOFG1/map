@@ -1,0 +1,146 @@
+body {
+  box-sizing: border-box;
+}
+
+h1 {
+  margin-bottom: 100px;
+}
+#map {
+  height: 650px;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.mapboxgl-map {
+  overflow: visible !important;
+}
+
+.mapboxgl-popup-content {
+  position: relative;
+  width: 300px;
+  background-color: #fff;
+  border-radius: 12px !important;
+  overflow: hidden;
+  padding: 11px 12px 9px !important;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+.popup__img {
+  width: 100%;
+  height: 150px;
+  border-radius: 8px;
+  border: 1px solid #000;
+  object-fit: cover;
+}
+
+.popup__box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.popup__title {
+  font-family: "Jomhuria", sans-serif;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 30px;
+  height: 18px;
+}
+
+.popup__city {
+  font-family: "Jost", sans-serif;
+  font-size: 14px;
+  height: 14px;
+  margin: 0 0 11px;
+}
+
+.popup__link {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 1;
+  margin: 0 0 2px;
+  text-decoration: none;
+}
+
+.popup__link_blue {
+  color: #0059ff;
+}
+
+.popup__logo {
+  height: 100px;
+  width: 80px;
+  object-fit: cover;
+}
+
+.popup__text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #fff;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(102, 102, 102, 0.9) 100%
+  );
+  font-size: 12px;
+  line-height: 1.2;
+  border-radius: 6px;
+  margin: 0 7px 7px;
+  text-align: center;
+  padding: 3px;
+}
+
+.popup__slider {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 9px;
+}
+
+.popup__slider-btn {
+  position: absolute;
+  top: 50%;
+  padding: 2px;
+  height: 15px;
+  width: 15px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.popup__slider-btn_left {
+  right: 100%;
+}
+
+.popup__slider-btn_right {
+  left: 100%;
+}
+
+.popup__slider-arrow {
+  height: 100%;
+  width: 100%;
+}
+
+.popup__slider-img {
+  height: 65px;
+  border-radius: 11px;
+  border: 1px solid #000;
+  object-fit: cover;
+  width: 31%;
+}
+
+.popup__icon {
+  height: 15px;
+  width: 15px;
+}
+
+.popup__stripes {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 120px;
+}
