@@ -16,6 +16,5 @@ map.on("load", () => {
 });
 
 map.addControl(new mapboxgl.NavigationControl());
-map.scrollZoom.disable();
 
 window.map = map;
