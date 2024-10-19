@@ -46,6 +46,42 @@ map.addSource("points", {
       },
     ],
   },
+  cluster: true,
+  clusterMaxZoom: 14, // Max zoom to cluster points on
+  clusterRadius: 50, // Radius of each cluster when clustering points (defaults to 50)
+});
+
+// Cluster
+map.addLayer({
+  id: "clusters",
+  type: "circle",
+  source: "points",
+  filter: ["has", "point_count"],
+  paint: {
+    "circle-color": [
+      "step",
+      ["get", "point_count"],
+      "#FF0000",
+      10,
+      "#FF0000",
+      20,
+      "#FF0000",
+    ],
+    "circle-radius": ["step", ["get", "point_count"], 15, 10, 20, 20, 25],
+  },
+});
+
+// Cluster count text
+map.addLayer({
+  id: "cluster-count",
+  type: "symbol",
+  source: "points",
+  filter: ["has", "point_count"],
+  layout: {
+    "text-field": "{point_count_abbreviated}",
+    "text-font": ["DIN Offc Pro Medium", "Arial Unicode MS Bold"],
+    "text-size": 12,
+  },
 });
 
 // Points
@@ -55,6 +91,11 @@ map.addLayer({
   source: "points",
   layout: {
     "icon-image": "pin2",
+    // get the title name from the source's "title" property
+    // "text-field": ["get", "title"],
+    // "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+    // "text-offset": [0, 1.25],
+    // "text-anchor": "top",
   },
 });
 
