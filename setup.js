@@ -1,7 +1,7 @@
 mapboxgl.accessToken =
   "pk.eyJ1Ijoib25lcGVhY2UiLCJhIjoiY2t1eHUxMmpiMGhxaTJucXFjd2k5ZjE2OSJ9.MwH_NiqfqOlyMU3j50Z1dw";
 
-const style = "mapbox://styles/mapbox/satellite-streets-v12";
+const style = "mapbox://styles/mapbox/dark-v11";
 const map = new mapboxgl.Map({
   style,
   projection: "globe",
@@ -17,11 +17,11 @@ map.on("load", () => {
 
 map.addControl(new mapboxgl.NavigationControl());
 
-map.addControl(
-  new MapboxDirections({
-    accessToken: mapboxgl.accessToken,
-  }),
-  "top-left"
-);
+// map.addControl(
+//   new MapboxDirections({
+//     accessToken: mapboxgl.accessToken,
+//   }),
+//   "top-left"
+// );
 
 window.map = map;
