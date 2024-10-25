@@ -50,6 +50,7 @@ map.addLayer({
   source: "points",
   layout: {
     "icon-image": ["get", "pin"],
+    "icon-anchor": "bottom",
   },
 });
 
