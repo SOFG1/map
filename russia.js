@@ -1,5 +1,3 @@
-await waitForLoad();
-
 const multipolygon = {
   type: "Feature",
   id: "RUS",
@@ -663,11 +661,16 @@ const multipolygon = {
   },
 };
 
+//Wait the map to load
+await new Promise((r) => map.on("load", r));
+
+//Add Russia polygon
 map.addSource("multipolygon", {
   type: "geojson",
   data: multipolygon,
 });
 
+//Fill Russian with grey
 map.addLayer({
   id: "multipolygon-fill",
   type: "fill",
@@ -675,8 +678,18 @@ map.addLayer({
   layout: {},
   paint: {
     "fill-color": "#474745",
-    "fill-opacity": 1,
+    "fill-opacity": 0.8,
   },
+});
+
+//Hide al labels inside Russia
+map.getStyle().layers.forEach((layer) => {
+  if (layer.id.includes("label")) {
+    map.setFilter(layer.id, [
+      "all",
+      ["!=", ["get", "iso_3166_1"], "RU"], // Exclude cities in Russia
+    ]);
+  }
 });
 
 // map.addLayer({
