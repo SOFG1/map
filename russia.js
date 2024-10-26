@@ -662,7 +662,7 @@ const multipolygon = {
 };
 
 //Wait the map to load
-await new Promise((r) => map.on("load", r));
+await waitForLoad();
 
 //Add Russia polygon
 map.addSource("multipolygon", {
