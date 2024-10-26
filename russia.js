@@ -677,8 +677,8 @@ map.addLayer({
   source: "multipolygon",
   layout: {},
   paint: {
-    "fill-color": "#474745",
-    "fill-opacity": 0.8,
+    "fill-color": "#888",
+    "fill-opacity": 0.9,
   },
 });
 
