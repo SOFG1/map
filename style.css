@@ -19,7 +19,7 @@ body {
   background-color: #fff;
   border-radius: 12px !important;
   overflow: hidden;
-  padding: 11px 12px 9px !important;
+  padding: 12px 15px 10px !important;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3) !important;
 }
 
@@ -60,7 +60,7 @@ body {
   font-weight: 500;
   font-size: 11px;
   line-height: 1;
-  margin: 0 0 2px;
+  margin: 0 0 5px;
   text-decoration: none;
 }
 
@@ -91,13 +91,6 @@ body {
   padding: 3px;
 }
 
-.popup__slider {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  margin: 0 9px;
-}
-
 .popup__slider-btn {
   position: absolute;
   top: 50%;
@@ -123,12 +116,22 @@ body {
   width: 100%;
 }
 
-.popup__slider-img {
+.slider-wrapper {
+  position: relative;
+}
+
+.swiper {
+  position: relative;
   height: 65px;
+  font-size: 0 !important;
+}
+
+.swiper-slide img {
+  height: 100%;
   border-radius: 11px;
   border: 1px solid #000;
   object-fit: cover;
-  width: 31%;
+  width: 100%;
 }
 
 .popup__icon {
