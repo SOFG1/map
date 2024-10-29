@@ -144,4 +144,17 @@ body {
   top: 0;
   right: 0;
   height: 120px;
+  pointer-events: none;
+}
+
+.image-full {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 70px;
+  object-fit: contain;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.7);
 }
