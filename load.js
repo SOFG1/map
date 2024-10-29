@@ -6,6 +6,7 @@ window.waitForLoad = waitForLoad;
 
 await waitForLoad();
 
+//Load pin images
 map.loadImage(
   "https://raw.githubusercontent.com/sofg1/map/main/images/pin1.png",
   (err, img) => {

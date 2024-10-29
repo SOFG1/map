@@ -7,21 +7,10 @@ const map = new mapboxgl.Map({
   projection: "globe",
   container: "map", // container ID
   center: [30.44053553463158, 50.45924483725847], // starting position [lng, lat]
-  zoom: 3, // starting zoom
+  zoom: 16, // starting zoom
   pitch: 30, // starting pitch
 });
 
-map.on("load", () => {
-  // Add a 3D building layer with fill-extrusion properties
-});
-
 map.addControl(new mapboxgl.NavigationControl());
-
-// map.addControl(
-//   new MapboxDirections({
-//     accessToken: mapboxgl.accessToken,
-//   }),
-//   "top-left"
-// );
 
 window.map = map;

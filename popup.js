@@ -71,20 +71,20 @@ function generatePopupHtml(props) {
   `;
 }
 
-function zoomImage(e) {
-  const image = e.target;
-  console.log(image.src);
-  const el = document.createElement("img");
-  el.src = image.src;
-  el.classList.add("image-full");
-  document.body.appendChild(el);
-  el.addEventListener("click", () => el.remove());
-}
-
 function makeImagesFull() {
   const images = document.querySelectorAll(".js-image");
   console.log(images);
-  images.forEach((i) => i.addEventListener("click", zoomImage));
+  images.forEach((i) =>
+    i.addEventListener("click", (e) => {
+      const image = e.target;
+      console.log(image.src);
+      const el = document.createElement("img");
+      el.src = image.src;
+      el.classList.add("image-full");
+      document.body.appendChild(el);
+      el.addEventListener("click", () => el.remove());
+    })
+  );
 }
 
 // Popup

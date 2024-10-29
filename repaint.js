@@ -1,31 +1,49 @@
-/////////////////////
-map.on("click", "3d-buildings", (e) => {
-  const feature = e.features[0];
-  console.log(feature);
-  feature.layer.paint["fill-extrusion-opacity"] = 0;
-  map.triggerRepaint();
-  console.log(feature);
-  ////////////////////////
-  map.addSource("currentBuildings", {
-    type: "geojson",
-    data: {
-      type: "FeatureCollection",
-      features: [feature],
-    },
-  });
+map.on("load", () => {
+  // Add the 3D buildings layer
   map.addLayer({
-    id: "red-buildings",
-    source: "currentBuildings",
+    id: "3d-buildings",
+    source: "composite",
+    "source-layer": "building",
+    filter: ["==", "extrude", "true"],
     type: "fill-extrusion",
-    layout: {
-      visibility: "visible",
-    },
+    minzoom: 15,
     paint: {
-      "fill-extrusion-color": "#FF0000",
-      "fill-extrusion-height": ["get", "height"],
-      "fill-extrusion-base": 0,
-      "fill-extrusion-opacity": 0.8,
+      "fill-extrusion-color": "#aaa",
+      "fill-extrusion-height": [
+        "interpolate",
+        ["linear"],
+        ["zoom"],
+        15,
+        0,
+        15.05,
+        ["get", "height"],
+      ],
+      "fill-extrusion-base": [
+        "interpolate",
+        ["linear"],
+        ["zoom"],
+        15,
+        0,
+        15.05,
+        ["get", "min_height"],
+      ],
+      "fill-extrusion-opacity": 0.6,
     },
   });
-  map.triggerRepaint();
+
+  // Add click event listener
+  map.on("click", (event) => {
+    // Get the features at the click location
+    const features = map.queryRenderedFeatures(event.point, {
+      layers: ["3d-buildings"],
+    });
+
+    // Check if a building was clicked
+    if (features.length > 0) {
+      const building = features[0];
+      const coordinates = building.geometry.coordinates;
+
+      console.log(coordinates);
+    }
+  });
 });
