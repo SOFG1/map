@@ -1,21 +1,26 @@
 await waitForLoad();
 
+const features = [];
+
+mapPointsData.forEach((properties) => {
+  properties.points.forEach((coordinates) => {
+    features.push({
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates,
+      },
+      properties,
+    });
+  });
+});
+
 // Data
 map.addSource("points", {
   type: "geojson",
   data: {
     type: "FeatureCollection",
-    features: mapPointsData.map((p) => {
-      const { coordinates, ...properties } = p;
-      return {
-        type: "Feature",
-        geometry: {
-          type: "Point",
-          coordinates: coordinates,
-        },
-        properties,
-      };
-    }),
+    features,
   },
 });
 

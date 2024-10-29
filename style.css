@@ -42,7 +42,6 @@ body {
   margin: 0;
   text-transform: uppercase;
   font-size: 30px;
-  height: 18px;
 }
 
 .popup__city {
@@ -131,6 +130,7 @@ body {
   border-radius: 11px;
   border: 1px solid #000;
   object-fit: cover;
+  box-sizing: border-box;
   width: 100%;
 }
 
@@ -157,4 +157,8 @@ body {
   object-fit: contain;
   box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.7);
+}
+
+.hidden {
+  display: none;
 }

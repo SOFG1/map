@@ -38,18 +38,22 @@ function generatePopupHtml(props) {
         <div class="popup__content">
           <p class="popup__title">${props.title}</p>
           <p class="popup__city">${props.location}</p>
-          <p class="popup__link">
+          <p class="popup__link ${props.address ? "" : "hidden"}">
             <img src="./images/icon4.svg" alt="" class="popup__icon" />${
               props.address
             }</p>
-          <a href="tel: +380507619698" class="popup__link popup__link_blue">
+          <a href="tel: +380507619698" class="popup__link popup__link_blue ${
+            props.phone ? "" : "hidden"
+          }">
             <img src="./images/icon3.svg" alt="" class="popup__icon" />${
               props.phone
             }</a>
           <a
             href="https://${props.telegram}"
             target="_blank"
-            class="popup__link popup__link_blue"
+            class="popup__link popup__link_blue ${
+              props.telegram ? "" : "hidden"
+            }"
           >
             <img src="./images/icon2.svg" alt="" class="popup__icon" />
             ${props.telegram}
@@ -57,7 +61,7 @@ function generatePopupHtml(props) {
           <a
             href="https://${props.insta}"
             target="_blank"
-            class="popup__link popup__link_blue"
+            class="popup__link popup__link_blue  ${props.insta ? "" : "hidden"}"
           >
             <img src="./images/icon1.svg" alt="" class="popup__icon" />
             ${props.insta}
@@ -77,7 +81,6 @@ function makeImagesFull() {
   images.forEach((i) =>
     i.addEventListener("click", (e) => {
       const image = e.target;
-      console.log(image.src);
       const el = document.createElement("img");
       el.src = image.src;
       el.classList.add("image-full");
