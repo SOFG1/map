@@ -14,23 +14,13 @@ map.on("load", () => {
     type: "geojson",
     data: {
       type: "FeatureCollection",
-      features: [
-        {
+      features: mapPointsData.map((p) => {
+        return {
           type: "Feature",
           state: {},
           geometry: {
             type: "Polygon",
-            coordinates: [
-              [
-                [30.4400427639484, 50.459292728314864],
-                [30.441316813230515, 50.45908098981212],
-                [30.441247075796127, 50.45891364742167],
-                [30.440108478069305, 50.45910318824804],
-                [30.440050810575485, 50.45911257989087],
-                [30.43997436761856, 50.459126240458886],
-                [30.44004276394844, 50.459292728314864],
-              ],
-            ],
+            coordinates: p.buildingModel,
           },
           properties: {
             type: "building",
@@ -64,8 +54,8 @@ map.on("load", () => {
           },
           source: "composite",
           sourceLayer: "building",
-        },
-      ],
+        };
+      }),
     },
   });
   map.addLayer({
