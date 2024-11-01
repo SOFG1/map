@@ -14,3 +14,17 @@ const map = new mapboxgl.Map({
 map.addControl(new mapboxgl.NavigationControl());
 
 window.map = map;
+
+//Set zoom step size
+document
+  .querySelector(".mapboxgl-ctrl-zoom-in")
+  .addEventListener("click", () => {
+    map.zoomTo(map.getZoom() + 3); // Adjust step as needed
+  });
+
+// Zoom out button
+document
+  .querySelector(".mapboxgl-ctrl-zoom-out")
+  .addEventListener("click", () => {
+    map.zoomTo(map.getZoom() - 3); // Adjust step as needed
+  });
