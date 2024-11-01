@@ -117,6 +117,7 @@ body {
 
 .slider-wrapper {
   position: relative;
+  margin: 0 7px;
 }
 
 .swiper {
