@@ -18,13 +18,13 @@ mapPointsData.forEach((p, pointIndex) => {
       state: {},
       geometry: {
         type: "Polygon",
-        coordinates: b,
+        coordinates: b.coords,
       },
       properties: {
         type: "building",
         min_height: 0,
         iso_3166_2: "UA-30",
-        height: 15.5,
+        height: b.height,
         underground: "false",
         extrude: "true",
         iso_3166_1: "UA",
