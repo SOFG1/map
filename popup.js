@@ -42,9 +42,9 @@ function generatePopupHtml(props) {
             <img src="./images/icon4.svg" alt="" class="popup__icon" />${
               props.address
             }</p>
-          <a href="tel: +380507619698" class="popup__link popup__link_blue ${
-            props.phone ? "" : "hidden"
-          }">
+          <a href="tel: ${props.phone}" class="popup__link popup__link_blue ${
+    props.phone ? "" : "hidden"
+  }">
             <img src="./images/icon3.svg" alt="" class="popup__icon" />${
               props.phone
             }</a>
