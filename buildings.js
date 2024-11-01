@@ -11,8 +11,8 @@ map.getStyle().layers.forEach(function (layer) {
 
 const features = [];
 
-mapPointsData.forEach((p) => {
-  p.buildings.forEach((b) => {
+mapPointsData.forEach((p, pointIndex) => {
+  p.buildings.forEach((b, index) => {
     features.push({
       type: "Feature",
       state: {},
@@ -29,7 +29,7 @@ mapPointsData.forEach((p) => {
         extrude: "true",
         iso_3166_1: "UA",
       },
-      id: 100738522,
+      id: pointIndex + index,
       layer: {
         id: "red-buildings",
         type: "fill-extrusion",

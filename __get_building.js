@@ -44,6 +44,7 @@ map.on("load", () => {
     // Check if a building was clicked
     if (features.length > 0) {
       const building = features[0];
+      // console.log(building);
       const coordinates = building.geometry.coordinates;
 
       console.log("Building:", coordinates);
