@@ -33,5 +33,6 @@ map.addLayer({
     // "icon-image": ["get", "pin"],
     "icon-image": "pin2",
     "icon-anchor": "bottom",
+    // "icon-allow-overlap": true,
   },
 });
