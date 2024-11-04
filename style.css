@@ -163,7 +163,6 @@ body.swiper-opened .slider-wrapper {
   width: calc(100vw - 160px);
   max-width: 1300px;
   transform: translate(-50%, -100px);
-  background-color: #000;
 }
 
 body.swiper-opened .swiper {

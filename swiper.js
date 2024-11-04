@@ -8,10 +8,14 @@ function createSwiper() {
     },
   });
   swiper.on("click", (e) => {
-    window.openSwiper();
-    setTimeout(() => {
-      swiper.slideTo(e.clickedIndex);
-    }, 100);
+    const opened = document.body.classList.contains("swiper-opened");
+    if (opened) document.body.classList.remove("swiper-opened");
+    if (!opened) {
+      window.openSwiper();
+      setTimeout(() => {
+        swiper.slideTo(e.clickedIndex);
+      }, 100);
+    }
   });
 }
 
