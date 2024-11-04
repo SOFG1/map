@@ -9,7 +9,12 @@ function createSwiper() {
   });
   swiper.on("click", (e) => {
     const opened = document.body.classList.contains("swiper-opened");
-    if (opened) document.body.classList.remove("swiper-opened");
+    if (opened) {
+      swiper.params.slidesPerView = 3;
+      swiper.params.gap = 8;
+      swiper.params.loop = false;
+      document.body.classList.remove("swiper-opened");
+    }
     if (!opened) {
       window.openSwiper();
       setTimeout(() => {
