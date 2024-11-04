@@ -160,9 +160,10 @@ body.swiper-opened .slider-wrapper {
   z-index: 1;
   margin: 0;
   height: calc(100vh - 100px);
-  width: calc(100vw - 150px);
+  width: calc(100vw - 160px);
   max-width: 1300px;
   transform: translate(-50%, -100px);
+  background-color: #000;
 }
 
 body.swiper-opened .swiper {
@@ -174,7 +175,7 @@ body.swiper-opened .mapboxgl-popup {
   transform: none !important;
   top: 100px;
   left: 50%;
-  max-width: 100% !important  ;
+  max-width: 100% !important;
 }
 
 body.swiper-opened .popup__slider-btn {
@@ -188,4 +189,12 @@ body.swiper-opened .popup__slider-btn {
 body.swiper-opened .swiper-slide img {
   object-fit: contain;
   border: 0;
+}
+
+.popup__slider-btn_left {
+  right: calc(100% + 5px);
+}
+
+.popup__slider-btn_right {
+  left: calc(100% + 5px);
 }
