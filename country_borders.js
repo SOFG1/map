@@ -13,12 +13,19 @@ map.addLayer({
   "source-layer": "admin", // This layer holds boundary data
   filter: ["==", ["get", "admin_level"], 0], // Filter for country borders
   paint: {
-    "line-color": "#0015ff", // Set the border color
-    "line-width": 1, // Set the border width
+    "line-color": "#000", // Set the border color
+    "line-width": [
+      "interpolate", // Interpolates between two values
+      ["linear"], // Linear interpolation
+      ["zoom"], // Current zoom level
+      10,
+      1,
+      18,
+      40,
+    ],
+    "line-opacity": 0.7,
   },
 });
-
-//Make country labels red
 
 //Fill Russia with grey color
 map.addLayer(
@@ -48,3 +55,13 @@ map.getStyle().layers.forEach((layer) => {
     ]);
   }
 });
+
+map.setFilter("country-label", [
+  "match",
+  ["get", "type"], // Replace 'name_en' with the appropriate property for your dataset
+  ["country"], // List of countries to match
+  true,
+  false, // Default to false for all other features
+]);
+
+map.setPaintProperty("country-label", "text-color", "#fc3517");

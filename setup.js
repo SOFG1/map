@@ -6,8 +6,8 @@ const map = new mapboxgl.Map({
   style,
   projection: "globe",
   container: "map", // container ID
-  center: [55.14671693860499, 25.078242928414614], // starting position [lng, lat]
-  zoom: 3,
+  center: [25, 42], // starting position [lng, lat]
+  zoom: 2.5,
   pitch: 30,
 });
 

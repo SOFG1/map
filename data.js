@@ -1046,5 +1046,3 @@ const mapPointsData = [
 ];
 
 window.mapPointsData = mapPointsData;
-
-console.log(mapPointsData);
