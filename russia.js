@@ -661,36 +661,36 @@ const multipolygon = {
   },
 };
 
-//Wait the map to load
-await waitForLoad();
+// //Wait the map to load
+// await waitForLoad();
 
-//Add Russia polygon
-map.addSource("multipolygon", {
-  type: "geojson",
-  data: multipolygon,
-});
+// //Add Russia polygon
+// map.addSource("multipolygon", {
+//   type: "geojson",
+//   data: multipolygon,
+// });
 
-//Fill Russian with grey
-map.addLayer({
-  id: "multipolygon-fill",
-  type: "fill",
-  source: "multipolygon",
-  layout: {},
-  paint: {
-    "fill-color": "#888",
-    "fill-opacity": 0.9,
-  },
-});
+// //Fill Russian with grey
+// map.addLayer({
+//   id: "multipolygon-fill",
+//   type: "fill",
+//   source: "multipolygon",
+//   layout: {},
+//   paint: {
+//     "fill-color": "#888",
+//     "fill-opacity": 0.9,
+//   },
+// });
 
-//Hide al labels inside Russia
-map.getStyle().layers.forEach((layer) => {
-  if (layer.id.includes("label")) {
-    map.setFilter(layer.id, [
-      "all",
-      ["!=", ["get", "iso_3166_1"], "RU"], // Exclude cities in Russia
-    ]);
-  }
-});
+// //Hide al labels inside Russia
+// map.getStyle().layers.forEach((layer) => {
+//   if (layer.id.includes("label")) {
+//     map.setFilter(layer.id, [
+//       "all",
+//       ["!=", ["get", "iso_3166_1"], "RU"], // Exclude cities in Russia
+//     ]);
+//   }
+// });
 
 // map.addLayer({
 //   id: "multipolygon-outline",
