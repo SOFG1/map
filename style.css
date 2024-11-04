@@ -148,18 +148,44 @@ body {
   pointer-events: none;
 }
 
-.image-full {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  padding: 70px;
-  object-fit: contain;
-  box-sizing: border-box;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
 .hidden {
   display: none;
+}
+
+/* Styles when swiper opened */
+body.swiper-opened .slider-wrapper {
+  position: fixed !important;
+  top: 50px !important;
+  left: 0;
+  z-index: 1;
+  margin: 0;
+  height: calc(100vh - 100px);
+  width: calc(100vw - 150px);
+  max-width: 1300px;
+  transform: translate(-50%, -100px);
+}
+
+body.swiper-opened .swiper {
+  border-radius: 8px;
+  overflow: hidden;
+  height: 100%;
+}
+body.swiper-opened .mapboxgl-popup {
+  transform: none !important;
+  top: 100px;
+  left: 50%;
+  max-width: 100% !important  ;
+}
+
+body.swiper-opened .popup__slider-btn {
+  width: 70px;
+  height: 70px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+body.swiper-opened .swiper-slide img {
+  object-fit: contain;
+  border: 0;
 }

@@ -1,5 +1,5 @@
 function createSwiper() {
-  const swiper = new Swiper(".swiper", {
+  window.swiper = new Swiper(".swiper", {
     slidesPerView: 3,
     spaceBetween: 8,
     navigation: {
@@ -7,6 +7,19 @@ function createSwiper() {
       prevEl: ".popup__slider-btn_left",
     },
   });
+  swiper.on("click", (e) => {
+    window.openSwiper();
+    setTimeout(() => {
+      swiper.slideTo(e.clickedIndex);
+    }, 100);
+  });
 }
+
+window.openSwiper = () => {
+  swiper.params.slidesPerView = 1;
+  swiper.params.gap = 40;
+  swiper.params.loop = true;
+  document.body.classList.add("swiper-opened");
+};
 
 window.createSwiper = createSwiper;

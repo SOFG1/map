@@ -6,7 +6,7 @@ function generateSlider(photos) {
         ${photos.map(
           (p) => `
           <div class="swiper-slide">
-            <img class="js-image" src="${p}" alt="photo" />
+            <img src="${p}" alt="photo" />
           </div>
           `
         )}
@@ -27,11 +27,11 @@ function generateSlider(photos) {
 
 function generatePopupHtml(props) {
   const photos = JSON.parse(props.photos);
-  queueMicrotask(createSwiper);
+  queueMicrotask(createSwiper); //Create a swiper after render
   return `
       ${
         photos[0]
-          ? `<img src="${photos[0]}" alt="image" class="popup__img js-image" />`
+          ? `<img src="${photos[0]}" alt="image" class="popup__img popup-main-js" />`
           : ""
       }
       <div class="popup__box">
@@ -75,21 +75,6 @@ function generatePopupHtml(props) {
   `;
 }
 
-function makeImagesFull() {
-  const images = document.querySelectorAll(".js-image");
-  console.log(images);
-  images.forEach((i) =>
-    i.addEventListener("click", (e) => {
-      const image = e.target;
-      const el = document.createElement("img");
-      el.src = image.src;
-      el.classList.add("image-full");
-      document.body.appendChild(el);
-      el.addEventListener("click", () => el.remove());
-    })
-  );
-}
-
 // Popup
 map.on("click", "unclustered-point", (e) => {
   const coordinates = e.features[0].geometry.coordinates.slice();
@@ -102,7 +87,15 @@ map.on("click", "unclustered-point", (e) => {
   new mapboxgl.Popup()
     .setLngLat(coordinates)
     .setHTML(generatePopupHtml(e.features[0].properties))
-    .addTo(map);
+    .addTo(map)
+    .on("close", () => {
+      swiper?.destroy();
+      document.body.classList.remove("swiper-opened");
+    });
+});
 
-  makeImagesFull();
+document.addEventListener("click", (e) => {
+  if (e.target.closest(".popup-main-js")) {
+    window.openSwiper();
+  }
 });
