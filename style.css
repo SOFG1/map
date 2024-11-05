@@ -8,19 +8,14 @@ body {
   width: 100vw;
 }
 
-.mapboxgl-popup {
-  max-width: 300px !important;
-  padding-bottom: 40px;
-}
-
 .mapboxgl-popup-content {
   position: relative;
   width: 300px;
   background-color: #fff;
-  border-radius: 12px !important;
+  border-radius: 12px;
   overflow: hidden;
-  padding: 12px 15px 10px !important;
-  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3) !important;
+  padding: 12px 15px 10px;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
 }
 
 .popup__img {
@@ -40,6 +35,7 @@ body {
 .popup__title {
   font-family: "Jomhuria", sans-serif;
   margin: 0;
+  line-height: 0.4;
   text-transform: uppercase;
   font-size: 30px;
 }
@@ -181,7 +177,7 @@ body.swiper-opened .popup__slider-btn {
   width: 70px;
   height: 70px;
   border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.15) !important;
   padding: 15px;
 }
 
@@ -190,10 +186,111 @@ body.swiper-opened .swiper-slide img {
   border: 0;
 }
 
-.popup__slider-btn_left {
+body.swiper-opened .popup__slider-btn_left {
   right: calc(100% + 5px);
 }
 
-.popup__slider-btn_right {
+body.swiper-opened .popup__slider-btn_right {
   left: calc(100% + 5px);
+}
+
+body.swiper-opened .mapboxgl-popup * {
+  font-size: 0 !important;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+body.swiper-opened .mapboxgl-popup-tip {
+  opacity: 0;
+}
+
+body.swiper-opened .popup__text,
+body.swiper-opened .popup__img,
+body.swiper-opened .popup__icon,
+body.swiper-opened .popup__logo,
+body.swiper-opened .popup__stripes {
+  display: none;
+}
+
+/***************************** Media 470px  **********************************/
+
+@media screen and (max-width: 470px) {
+  .mapboxgl-popup-content {
+    width: 240px;
+    border-radius: 7px !important;
+  }
+
+  .popup__img {
+    height: 120px;
+    border-radius: 5px;
+  }
+
+  .popup__title {
+    font-size: 26px;
+  }
+
+  .popup__city {
+    font-size: 12px;
+    height: 12px;
+  }
+
+  .popup__link {
+    font-size: 10px;
+  }
+
+  .popup__logo {
+    height: 80px;
+    width: 65px;
+  }
+
+  .popup__text {
+    font-size: 10px;
+    margin: 4px;
+    padding: 2px;
+  }
+
+  .swiper {
+    height: 55px;
+  }
+
+  .swiper-slide img {
+    border: 0;
+  }
+
+  .popup__icon {
+    height: 12px;
+    width: 12px;
+  }
+
+  .popup__stripes {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 90px;
+    pointer-events: none;
+  }
+
+  /* Styles when swiper opened */
+  body.swiper-opened .slider-wrapper {
+    top: 20px !important;
+    height: calc(100vh - 40px);
+    width: calc(100vw - 30px);
+  }
+
+  body.swiper-opened .popup__slider-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    padding: 8px;
+    z-index: 1;
+  }
+
+  body.swiper-opened .popup__slider-btn_left {
+    right: calc(100% - 30px);
+  }
+
+  body.swiper-opened .popup__slider-btn_right {
+    left: calc(100% - 30px);
+  }
 }
