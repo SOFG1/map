@@ -64,4 +64,5 @@ map.setFilter("country-label", [
   false, // Default to false for all other features
 ]);
 
-map.setPaintProperty("country-label", "text-color", "#fc3517");
+map.setPaintProperty("country-label", "text-color", "#242ad4");
+map.setPaintProperty("country-label", "text-halo-color", "#fff");
