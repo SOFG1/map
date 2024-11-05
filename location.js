@@ -5,7 +5,7 @@ if ("geolocation" in navigator) {
       const longitude = position.coords.longitude;
       console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
 
-      map.jumpTo({
+      map.easeTo({
         center: [longitude, latitude],
       });
     },
