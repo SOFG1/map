@@ -1,9 +1,5 @@
 await waitForLoad();
 
-const language = new MapboxLanguage({ defaultLanguage: "uk" });
-console.log(language);
-map.addControl(language);
-
 const select = document.querySelector(".lang-select");
 
 select.addEventListener("change", (e) => {
