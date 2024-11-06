@@ -36308,8 +36308,6 @@ const features = [
   },
 ];
 
-features.forEach((f) => console.log(f.id));
-
 //Wait the map to load
 await waitForLoad();
 
