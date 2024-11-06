@@ -47,6 +47,13 @@ map.addLayer(
 map.setFilter("country-boundaries", ["in", "iso_3166_1_alpha_3", "RUS"]);
 
 //Hide all labels inside Russia
+map.setPaintProperty("country-label", "text-color", [
+  "case",
+  ["==", ["get", "type"], "country"], // Condition check
+  "#242ad4", // Color if condition is true
+  ["get", "text-color"], // Leave default color if condition is false
+]);
+
 map.getStyle().layers.forEach((layer) => {
   if (layer.id.includes("label")) {
     map.setFilter(layer.id, [
@@ -55,15 +62,3 @@ map.getStyle().layers.forEach((layer) => {
     ]);
   }
 });
-map.setFilter("country-label", ["!=", ["get", "iso_3166_1"], "RU"]);
-
-map.setFilter("country-label", [
-  "match",
-  ["get", "type"], // Replace 'name_en' with the appropriate property for your dataset
-  ["country"], // List of countries to match
-  true,
-  false, // Default to false for all other features
-]);
-
-map.setPaintProperty("country-label", "text-color", "#242ad4");
-map.setPaintProperty("country-label", "text-halo-color", "#fff");
