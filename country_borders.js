@@ -66,3 +66,5 @@ map.setFilter("country-label", [
 
 map.setPaintProperty("country-label", "text-color", "#242ad4");
 map.setPaintProperty("country-label", "text-halo-color", "#fff");
+
+map.setFilter("country-label", ["!=", ["get", "iso_3166_1"], "RU"]);
