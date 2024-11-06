@@ -1097,6 +1097,34 @@ const mapPointsData = [
     points: [[30.52258576525469, 50.450996040521524]],
     buildings: [],
   },
+  {
+    title: "Valencia Mafia",
+    location: "Valencia, Spain",
+    telegram: "t.me/MafiaWorld_game_bot",
+    insta: "instagram.com/mafia.valencia_",
+    phone: "664898771",
+    photos: ["./photos/35-1.jpg", "./photos/35-2.jpg", "./photos/35-3.png"],
+    points: [[-0.37586371399887336, 39.47513184935206]],
+    buildings: [],
+  },
+  {
+    title: "Barcelona Mafia",
+    location: "Barcelona, Spain",
+    telegram: "t.me/MafiaWorld_game_bot",
+    insta: "instagram.com/mafia.barcelona",
+    photos: ["./photos/36-1.jpg", "./photos/36-2.jpg", "./photos/36-3.jpg"],
+    points: [[2.1758432539711468, 41.400752246223675]],
+    buildings: [],
+  },
+  {
+    title: "Alicante Mafia",
+    location: "Alicante, Spain",
+    telegram: "t.me/MafiaWorld_game_bot",
+    insta: "instagram.com/_mafia.alicante_",
+    photos: ["./photos/36-1.jpg", "./photos/36-2.jpg", "./photos/36-3.jpg"],
+    points: [[-0.48526630067850757, 38.35342881904687]],
+    buildings: [],
+  },
 ];
 
 window.mapPointsData = mapPointsData;
