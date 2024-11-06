@@ -27,3 +27,14 @@ map.getStyle().layers.forEach((layer) => {
     ]);
   }
 });
+
+map.on("click", (e) => {
+  console.log(123123);
+  const features = map.queryRenderedFeatures(e.point, {
+    layers: ["country-boundaries"], // Specify the layer(s) you want to query
+  });
+
+  if (features.length > 0) {
+    console.log(features); // Log the feature data
+  }
+});

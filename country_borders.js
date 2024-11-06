@@ -32,5 +32,5 @@ map.setPaintProperty("country-label", "text-color", [
   "case",
   ["==", ["get", "type"], "country"], // Condition check
   "#242ad4", // Color if condition is true
-  ["get", "text-color"], // Leave default color if condition is false
+  ["to-color", ["coalesce", ["get", "text-color"], "#000000"]], // Leave default color if condition is false
 ]);
