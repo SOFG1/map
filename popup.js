@@ -13,11 +13,11 @@ function generateSlider(photos) {
         </div>
       </div>
       <button class="popup__slider-btn popup__slider-btn_left">
-        <img src="./images/arrow-left.svg" class="popup__slider-arrow" />
+        <img src="./assets/images/arrow-left.svg" class="popup__slider-arrow" />
       </button>
       <button class="popup__slider-btn popup__slider-btn_right">
         <img
-          src="./images/arrow-right.svg"
+          src="./assets/images/arrow-right.svg"
           class="popup__slider-arrow"
         />
       </button>
@@ -39,13 +39,13 @@ function generatePopupHtml(props) {
           <p class="popup__title">${props.title}</p>
           <p class="popup__city">${props.location}</p>
           <p class="popup__link ${props.address ? "" : "hidden"}">
-            <img src="./images/icon4.svg" alt="" class="popup__icon" />${
+            <img src="./assets/images/icon4.svg" alt="" class="popup__icon" />${
               props.address
             }</p>
           <a href="tel: ${props.phone}" class="popup__link popup__link_blue ${
     props.phone ? "" : "hidden"
   }">
-            <img src="./images/icon3.svg" alt="" class="popup__icon" />${
+            <img src="./assets/images/icon3.svg" alt="" class="popup__icon" />${
               props.phone
             }</a>
           <a
@@ -55,7 +55,7 @@ function generatePopupHtml(props) {
               props.telegram ? "" : "hidden"
             }"
           >
-            <img src="./images/icon2.svg" alt="" class="popup__icon" />
+            <img src="./assets/images/icon2.svg" alt="" class="popup__icon" />
             ${props.telegram}
           </a>
           <a
@@ -63,7 +63,7 @@ function generatePopupHtml(props) {
             target="_blank"
             class="popup__link popup__link_blue  ${props.insta ? "" : "hidden"}"
           >
-            <img src="./images/icon1.svg" alt="" class="popup__icon" />
+            <img src="./assets/images/icon1.svg" alt="" class="popup__icon" />
             ${props.insta}
           </a>
         </div>
@@ -71,7 +71,7 @@ function generatePopupHtml(props) {
       </div>
       ${props.text ? `<div class="popup__text">${props.text}</div>` : ""}
       ${generateSlider(photos)}
-      <img src="./images/stripes.svg" class="popup__stripes" />
+      <img src="./assets/images/stripes.svg" class="popup__stripes" />
   `;
 }
 
