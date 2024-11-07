@@ -4,9 +4,9 @@ if ("geolocation" in navigator) {
       const latitude = position.coords.latitude;
       const longitude = position.coords.longitude;
       map.easeTo({
-        center: [longitude, latitude],
-        // center: mapPointsData.at(-1).points[0],
-        // zoom: 18,
+        //center: [longitude, latitude],
+        center: [-74.01006506279532, 40.72078039153243],
+        zoom: 9,
       });
     },
     (error) => {

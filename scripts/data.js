@@ -1221,7 +1221,15 @@ const mapPointsData = [
   },
 ];
 
+const newPoints = [
+  {
+    location: "NEW YORK, USA",
+    point: [-73.99802190550197, 40.72109598656931],
+  },
+];
+
 window.mapPointsData = mapPointsData;
+window.newPoints = newPoints;
 
 // console.log(mapPointsData);
 
