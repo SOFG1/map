@@ -67,7 +67,7 @@ function generatePopupHtml(props) {
             ${props.insta}
           </a>
         </div>
-        <img src="./images/logo.png" alt="" class="popup__logo" />
+        <img src="${props.logo}" alt="" class="popup__logo" />
       </div>
       ${props.text ? `<div class="popup__text">${props.text}</div>` : ""}
       ${generateSlider(photos)}

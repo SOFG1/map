@@ -65,8 +65,8 @@ body {
 
 .popup__logo {
   height: 100px;
-  width: 80px;
-  object-fit: cover;
+  width: 100px;
+  object-fit: contain;
 }
 
 .popup__text {

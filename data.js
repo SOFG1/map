@@ -6,6 +6,7 @@ const mapPointsData = [
     phone: "+971585921103",
     telegram: "t.me/MafiaDubaiGame",
     insta: "instagram.com/dubai_mafia_game",
+    logo: "./logos/Dubai.jpg",
     photos: [
       "./photos/1-1.jpg",
       "./photos/1-2.jpg",
@@ -92,6 +93,7 @@ const mapPointsData = [
     phone: "+380679950363",
     telegram: "t.me/MafiaFrankivsk",
     insta: "instagram.com/ivanofrankivsk.mafia",
+    logo: "./logos/Ivano-Frankivsk.jpg",
     photos: [
       "./photos/2-1.jpg",
       "./photos/2-2.jpg",
@@ -131,6 +133,7 @@ const mapPointsData = [
     address: "Ресторан “Panorama Loft&garden” ",
     telegram: "t.me/mafiacascais",
     insta: "instagram.com/mafiacascais",
+    logo: "./logos/Cascais.jpg",
     photos: [
       "./photos/3-1.jpg",
       "./photos/3-2.jpg",
@@ -170,6 +173,7 @@ const mapPointsData = [
     phone: "0664832337",
     telegram: "t.me/+Ul9u1sWL9a84ODIy",
     insta: "instagram.com/mafia.chernivtsi",
+    logo: "./logos/Chernivtsi.jpg",
     photos: [
       "./photos/4-1.jpg",
       "./photos/4-2.jpg",
@@ -213,6 +217,7 @@ const mapPointsData = [
     phone: "+43 677 64048756",
     telegram: "t.me/MafiaBratislavaGame",
     insta: "instagram.com/mafia.bratislava",
+    logo: "./logos/Bratislava.jpg",
     photos: [
       "./photos/4-1.jpg",
       "./photos/4-2.jpg",
@@ -248,6 +253,7 @@ const mapPointsData = [
     phone: "+4367764048756",
     telegram: "t.me/MafiaWienClub",
     insta: "instagram.com/wien_mafia_game",
+    logo: "./logos/Wien.jpg",
     photos: [
       "./photos/5-1.jpg",
       "./photos/5-2.jpg",
@@ -289,6 +295,7 @@ const mapPointsData = [
     telegram: "t.me/MafiaLodz",
     insta: "instagram.com/lodz.mafia",
     text: "Граємо кожну суботу о 18:00, хороший настрій, нові знайомства та яскраві емоції гарантуємо!",
+    logo: "./logos/Lodz.jpg",
     photos: [
       "./photos/6-1.jpg",
       "./photos/6-2.jpg",
@@ -319,6 +326,7 @@ const mapPointsData = [
     phone: null,
     telegram: "t.me/+q39ISxeew61jOTBi",
     insta: "instagram.com/uzhgorod.game",
+    logo: "./logos/Uzhgorod.jpg",
     photos: [
       "./photos/7-1.jpg",
       "./photos/7-2.jpg",
@@ -359,6 +367,7 @@ const mapPointsData = [
     telegram: "t.me/+olk7xXo-TrQ5YTBi",
     insta: "instagram.com/poltavamafia",
     text: "Найвеселіший мафіозний клуб міста Полтави. Граємо кожен четвер та неділю, в найкращих закладах міста. Приєднуйтесь.",
+    logo: "./logos/Poltava.jpg",
     photos: [
       "./photos/8-1.jpg",
       "./photos/8-2.jpg",
@@ -391,6 +400,7 @@ const mapPointsData = [
     telegram: "t.me/MafiaLutskGame",
     insta: "www.instagram.com/lutsk.mafia",
     text: "Створюємо гарний настрій вже 13 років! Граємо кожні Ср, Пт та Нд в різних ресторанах в центрі міста. Завжди раді новим обличчям!",
+    logo: "./logos/Lutsk.jpg",
     photos: [
       "./photos/9-1.jpg",
       "./photos/9-2.jpg",
@@ -440,6 +450,7 @@ const mapPointsData = [
       "./photos/10-5.jpg",
       "./photos/10-6.jpg",
     ],
+    logo: "./logos/Wien.jpg",
     points: [
       [16.41266, 48.193641],
       [16.327131489344367, 48.22783625679196],
@@ -484,6 +495,7 @@ const mapPointsData = [
     telegram: "t.me/lviv_mafia_games",
     insta: "instagram.com/lviv.mafia",
     text: "Збираємо найкращих мафіозі Львова вже два роки! Граємо кожного четверга та суботи! Чекаємо нових мафіозі в своїй банді!",
+    logo: "./logos/Lviv.jpg",
     photos: [
       "./photos/11-1.jpg",
       "./photos/11-2.jpg",
@@ -522,6 +534,7 @@ const mapPointsData = [
     telegram: "t.me/MafiaWroclaw",
     insta: "instagram.com/mafia.wroclaw",
     text: "Дарим яркие эмоции и новые знакомства уже 13 лет! Играем каждую неделю в разных  ресторанах города Вроцлав. Всегда рады новым лицам, ждем вас!",
+    logo: "./logos/Wroclaw.jpg",
     photos: [
       "./photos/12-1.jpg",
       "./photos/12-2.jpg",
@@ -569,6 +582,7 @@ const mapPointsData = [
     telegram: "t.me/Mafia_Miami",
     insta: "instagram.com/mafia_game_miami",
     text: "Новые знакомства и веселье обеспечены! Играем каждый четверг и воскресенье, локация может меняться, обязательная запись по телефону!",
+    logo: "./logos/Miami.jpg",
     photos: [
       "./photos/13-1.jpg",
       "./photos/13-2.jpg",
@@ -640,6 +654,7 @@ const mapPointsData = [
     telegram: "t.me/+jnlVj9hZU6hjN2My",
     insta: "instagram.com/mafia_warsaw",
     text: "Лучший клуб игры в Мафию в Варшаве 😎 Позитивные эмоции в кругу успешных и веселых людей ⚡️",
+    logo: "./logos/Warsaw.jpg",
     photos: [
       "./photos/14-1.jpg",
       "./photos/14-2.jpg",
@@ -698,6 +713,7 @@ const mapPointsData = [
     telegram: "t.me/+GbUJEZZaUjNiOWIy",
     insta: "instagram.com/khmelnytsky.mafia",
     text: "Створюємо гарний настрій та даруємо радість у чудовій атмосфері . Граємо що , Пт та Нд в різних ресторанах в центрі міста. Завжди раді новим обличчям!",
+    logo: "./logos/Khmelnytskiy.jpg",
     photos: [
       "./photos/15-1.jpg",
       "./photos/15-2.jpg",
@@ -738,6 +754,7 @@ const mapPointsData = [
     telegram: "t.me/mafia_Pragu",
     insta: "instagram.com/mafia_Pragu",
     text: "НОВЫЙ формат игры Мафия в Чехии!) Сеть клубов по всему миру!) После игр афтерпати!) У нас незабываемые емоции и впечатления) Рады видеть новые лица!",
+    logo: "./logos/Praha.jpg",
     photos: [
       "./photos/16-1.jpg",
       "./photos/16-2.jpg",
@@ -779,6 +796,7 @@ const mapPointsData = [
     telegram: "t.me/+-P12U9H1Qbk3OWYy",
     insta: "instagram.com/brody.mafia",
     text: "Створюємо гарний настрій. Граємо по вихідних в різних ресторанах у центрі міста. Завжди раді новим обличчям.",
+    logo: "./logos/Brody.jpg",
     photos: [
       "./photos/17-1.jpg",
       "./photos/17-2.jpg",
@@ -811,6 +829,7 @@ const mapPointsData = [
     telegram: "t.me/Kremenchuk_Mafia",
     insta: "instagram.com/mafia_kremin",
     text: "Створюємо гарний настрій 😎. Граємо кожного чт та нд в найкращих ресторанах в центрі міста. Завжди раді новим обличчям",
+    logo: "./logos/Kremenchuk.jpg",
     photos: [
       "./photos/18-1.jpg",
       "./photos/18-2.jpg",
@@ -849,6 +868,7 @@ const mapPointsData = [
     telegram: null,
     insta: null,
     text: "Створюємо гарний настрій, урізноманітнюєм Ваш відпочинок в серці гірськолижного курорту Буковель",
+    logo: "./logos/Polyanytsia.jpg",
     photos: ["./photos/19-1.jpg", "./photos/19-2.jpg", "./photos/19-3.jpg"],
     points: [[24.411319169761846, 48.356872767931385]],
     buildings: [
@@ -886,6 +906,7 @@ const mapPointsData = [
     telegram: "t.me/MafiaVinnitsa",
     insta: "instagram.com/vinnitsa.mafia",
     text: "Створюємо гарний настрій вже більше двох років! Граємо кожні пятницю і неділю у ресторані Rich у центрі міста. Завжди раді новим обличчям!",
+    logo: "./logos/Vinnytsya.jpg",
     photos: ["./photos/20-1.jpg"],
     points: [[28.469155564546128, 49.23530423288875]],
     buildings: [
@@ -915,6 +936,7 @@ const mapPointsData = [
     phone: "+380981108534",
     telegram: "t.me/+2HcNcMU863o0ZjMy",
     insta: "instagram.com/mafia.romny",
+    logo: "./logos/Romny.jpg",
     photos: [
       "./photos/21-1.jpg",
       "./photos/21-2.jpg",
@@ -950,6 +972,7 @@ const mapPointsData = [
     telegram: "t.me/MafiaEdmonton",
     insta: "instagram.com/mafia_edmonton_game",
     text: "Єднаємо українців у цей нелегкий період часу 🤞🇺🇦 Граємо кожну Сб в кращих ресторанах Едмонтона. Гарний настрій і приємні емоції гарантовано !",
+    logo: "./logos/Edmonton.jpg",
     photos: [
       "./photos/22-1.jpg",
       "./photos/22-2.jpg",
@@ -988,6 +1011,7 @@ const mapPointsData = [
     location: "Wien, Austria",
     telegram: "t.me/mafia_vienna",
     insta: "instagram.com/mafia.wien.game",
+    logo: "./logos/Wien.jpg",
     photos: [
       "./photos/23-1.jpg",
       "./photos/23-2.jpg",
@@ -1002,6 +1026,7 @@ const mapPointsData = [
     location: "Gdansk, Poland",
     telegram: "t.me/MafiaWorld_game_bot",
     insta: "instagram.com/mafia.gdansk",
+    logo: "./logos/Gdansk.jpg",
     photos: ["./photos/24-1.jpg", "./photos/24-2.jpg", "./photos/24-3.jpg"],
     points: [[18.647578710233624, 54.35203475872797]],
     buildings: [],
@@ -1011,6 +1036,7 @@ const mapPointsData = [
     location: "Los Angeles, USA",
     telegram: "t.me/LA_Mafia_Game",
     insta: "instagram.com/mafia.game.losangeles",
+    logo: "./logos/LA.jpg",
     photos: ["./photos/25-1.jpg", "./photos/25-2.jpg", "./photos/25-3.jpg"],
     points: [[-118.24879891110042, 34.06263036971629]],
     buildings: [],
@@ -1020,6 +1046,7 @@ const mapPointsData = [
     location: "Tashkent, Uzbekistan",
     telegram: "t.me/MafiaWorld_game_bot",
     insta: "instagram.com/mafia_game_tashkent",
+    logo: "./logos/Tashkent.jpg",
     photos: ["./photos/26-1.jpg", "./photos/26-2.jpg", "./photos/26-3.jpg"],
     points: [[69.24063765873603, 41.30011229836161]],
     buildings: [],
@@ -1029,6 +1056,7 @@ const mapPointsData = [
     location: "Alicante, Spain",
     telegram: "t.me/MafiaWorld_game_bot",
     insta: "instagram.com/alicante.mafia",
+    logo: "./logos/Alicante.jpg",
     photos: ["./photos/27-1.jpg", "./photos/27-2.jpg", "./photos/27-3.jpg"],
     points: [[-0.490674669312844, 38.34605857436629]],
     buildings: [],
@@ -1038,6 +1066,7 @@ const mapPointsData = [
     location: "Chornomorsk, Ukraine",
     telegram: "t.me/MafiaWorld_game_bot",
     insta: "instagram.com/chornomorsk.mafia",
+    logo: "./logos/Chornomorsk.jpg",
     photos: ["./photos/28-1.jpg", "./photos/28-2.jpg", "./photos/28-3.jpg"],
     points: [[30.648483485704443, 46.29510834110766]],
     buildings: [],
@@ -1047,6 +1076,7 @@ const mapPointsData = [
     location: "Zhytomyr, Ukraine",
     telegram: "t.me/MafiaWorld_game_bot",
     insta: "instagram.com/zhytomyr.mafia",
+    logo: "./logos/Zhytomyr.jpg",
     photos: ["./photos/29-1.jpg", "./photos/29-2.jpg", "./photos/29-3.jpg"],
     points: [[28.666642242467944, 50.26166209817281]],
     buildings: [],
@@ -1056,6 +1086,7 @@ const mapPointsData = [
     location: "Kamyanets-Podilskyi, Ukraine",
     telegram: "t.me/MafiaWorld_game_bot",
     insta: "instagram.com/mafia_kamianets_podilsky",
+    logo: "./logos/Kamyanets-podilskiy.jpg",
     photos: ["./photos/30-1.jpg", "./photos/30-2.png", "./photos/30-3.png"],
     points: [[26.58290788754984, 48.69685645648874]],
     buildings: [],
@@ -1065,6 +1096,7 @@ const mapPointsData = [
     location: "Sumy, Ukraine",
     telegram: "t.me/Sumy_Game",
     insta: "instagram.com/sumy.mafia",
+    logo: "./logos/Sumy.jpg",
     photos: ["./photos/31-1.jpg", "./photos/31-2.jpg", "./photos/31-3.jpg"],
     points: [[34.79820622228515, 50.907634068346276]],
     buildings: [],
@@ -1074,6 +1106,7 @@ const mapPointsData = [
     location: "Riga, Latvia",
     telegram: "t.me/MafiaWorld_game_bot",
     insta: "instagram.com/RigaMafia",
+    logo: "./logos/Riga.jpg",
     photos: ["./photos/32-1.jpg", "./photos/32-2.jpg", "./photos/32-3.jpg"],
     points: [[24.10511555492625, 56.96734021535275]],
     buildings: [],
@@ -1083,6 +1116,7 @@ const mapPointsData = [
     location: "London, England",
     telegram: "t.me/MafiaWorld_game_bot",
     insta: "instagram.com/london.mafia.game",
+    logo: "./logos/London.jpg",
     photos: ["./photos/33-1.jpg", "./photos/33-2.jpg", "./photos/33-3.jpg"],
     points: [[-0.12766588496868608, 51.50742551908721]],
     buildings: [],
@@ -1093,6 +1127,7 @@ const mapPointsData = [
     telegram: "t.me/MafiaWorld_game_bot",
     insta: "instagram.com/mafia_kyiv_game",
     phone: "0674346026",
+    logo: "./logos/Kyiv.png",
     photos: ["./photos/34-1.jpg", "./photos/34-2.jpg", "./photos/34-3.jpg"],
     points: [[30.52258576525469, 50.450996040521524]],
     buildings: [],
@@ -1103,24 +1138,27 @@ const mapPointsData = [
     telegram: "t.me/MafiaWorld_game_bot",
     insta: "instagram.com/mafia.valencia_",
     phone: "664898771",
+    logo: "./logos/Valencia.jpg",
     photos: ["./photos/35-1.jpg", "./photos/35-2.jpg", "./photos/35-3.png"],
     points: [[-0.37586371399887336, 39.47513184935206]],
     buildings: [],
   },
-  {
-    title: "Barcelona Mafia",
-    location: "Barcelona, Spain",
-    telegram: "t.me/MafiaWorld_game_bot",
-    insta: "instagram.com/mafia.barcelona",
-    photos: ["./photos/36-1.jpg", "./photos/36-2.jpg", "./photos/36-3.jpg"],
-    points: [[2.1758432539711468, 41.400752246223675]],
-    buildings: [],
-  },
+  // {
+  //   title: "Barcelona Mafia",
+  //   location: "Barcelona, Spain",
+  //   telegram: "t.me/MafiaWorld_game_bot",
+  //   insta: "instagram.com/mafia.barcelona",
+  //   logo: "./logos/Barcelona.jpg",
+  //   photos: ["./photos/36-1.jpg", "./photos/36-2.jpg", "./photos/36-3.jpg"],
+  //   points: [[2.1758432539711468, 41.400752246223675]],
+  //   buildings: [],
+  // },
   {
     title: "Alicante Mafia",
     location: "Alicante, Spain",
     telegram: "t.me/MafiaWorld_game_bot",
     insta: "instagram.com/_mafia.alicante_",
+    logo: "./logos/Alicante.jpg",
     photos: ["./photos/36-1.jpg", "./photos/36-2.jpg", "./photos/36-3.jpg"],
     points: [[-0.48526630067850757, 38.35342881904687]],
     buildings: [],
@@ -1128,3 +1166,17 @@ const mapPointsData = [
 ];
 
 window.mapPointsData = mapPointsData;
+
+// console.log(mapPointsData);
+
+// function renderLogos() {
+//   mapPointsData.forEach((p) => {
+//     const img = document.createElement("img");
+//     img.src = p.logo;
+//     img.alt = p.title;
+//     const html = `<img src="${p.logo}" alt="${p.title}" />`;
+//     document.body.prepend(img);
+//   });
+// }
+
+// renderLogos();
