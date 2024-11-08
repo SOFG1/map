@@ -63,6 +63,10 @@ body {
   color: #0059ff;
 }
 
+.popup__link_black {
+  color: #000;
+}
+
 .popup__logo {
   height: 100px;
   width: 100px;
