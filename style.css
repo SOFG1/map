@@ -12,13 +12,14 @@ body {
   position: relative;
   width: 300px;
   background-color: #fff;
-  border-radius: 12px;
+  border-radius: 12px !important;
   overflow: hidden;
   padding: 12px 15px 10px;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
 }
 
 .popup__img {
+  position: relative;
   width: 100%;
   height: 150px;
   border-radius: 8px;
@@ -26,10 +27,24 @@ body {
   object-fit: cover;
 }
 
+.popup__img_secondary {
+  margin-bottom: 14px;
+}
+
 .popup__box {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.popup__content {
+  max-width: 205px;
+}
+
+.popup__content_secondary {
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
 }
 
 .popup__title {
@@ -40,11 +55,21 @@ body {
   font-size: 30px;
 }
 
+.popup__title_secondary {
+  margin-bottom: 10px;
+}
+
 .popup__city {
   font-family: "Jost", sans-serif;
   font-size: 14px;
   height: 14px;
   margin: 0 0 11px;
+}
+
+.popup__link-box {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
 }
 
 .popup__link {
@@ -59,6 +84,11 @@ body {
   text-decoration: none;
 }
 
+.popup__link_center {
+  width: 100%;
+  justify-content: center;
+}
+
 .popup__link_blue {
   color: #0059ff;
 }
@@ -71,6 +101,11 @@ body {
   height: 100px;
   width: 100px;
   object-fit: contain;
+}
+
+.popup__logo_secondary {
+  display: block;
+  margin: 0 auto;
 }
 
 .popup__text {
@@ -145,6 +180,24 @@ body {
   top: 0;
   right: 0;
   height: 120px;
+  pointer-events: none;
+}
+
+.popup__stripes2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  object-fit: contain;
+  width: 100%;
+}
+
+.popup__stripes3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   pointer-events: none;
 }
 
@@ -227,7 +280,7 @@ body.swiper-opened .popup__stripes {
 
 @media screen and (max-width: 470px) {
   .mapboxgl-popup-content {
-    width: 240px;
+    width: 240px !important;
     border-radius: 7px !important;
   }
 
@@ -236,8 +289,24 @@ body.swiper-opened .popup__stripes {
     border-radius: 5px;
   }
 
+  .popup__content {
+    max-width: 175px;
+  }
+
+  .popup__content_secondary {
+    max-width: 100%;
+  }
+
+  .popup__img_secondary {
+    margin-bottom: 8px;
+  }
+
   .popup__title {
     font-size: 26px;
+  }
+
+  .popup__title_secondary {
+    margin-bottom: 8px;
   }
 
   .popup__city {
@@ -252,6 +321,11 @@ body.swiper-opened .popup__stripes {
   .popup__logo {
     height: 80px;
     width: 65px;
+  }
+
+  .popup__logo_secondary {
+    width: 90px;
+    height: 90px;
   }
 
   .popup__text {

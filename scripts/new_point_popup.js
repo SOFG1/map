@@ -2,24 +2,27 @@ const text =
   "Шукаємо партнерів для відкриття клубу Мафії в цьому чудовому місті 😎";
 const phone = "+38 050 761 96 98";
 const link = "https://franchise.mafia.events/";
-const linkText = "franchise.mafia.events";
+const linkText = "Franchise.Mafia.Events";
 const instaLink = "https://www.instagram.com/man_of_mafia/";
 const instaText = "man_of_mafia";
 
 function generatePopupHtml(props) {
   return `
-      <img src="./assets/images/new-point-photo.png" alt="image" class="popup__img" />
-      <div class="popup__box">
-        <div class="popup__content">
-          <p class="popup__title">${props.location}</p>
-            <a href="tel: ${phone}" class="popup__link popup__link_black">
-              <img src="./assets/images/icon3.svg" alt="" class="popup__icon" />
-              ${phone}
-            </a>
+      <img src="./assets/images/stripes2.png" class="popup__stripes2" />
+      <img src="./assets/images/new-point-photo.png" alt="image" class="popup__img popup__img_secondary" />
+      <div class="popup__box popup__box_secondary">
+        <div class="popup__content popup__content_secondary">
+          <p class="popup__title popup__title_secondary">${props.location}</p>
+          <div class="popup__text">${text}</div>
+          <a href="tel: ${phone}" class="popup__link popup__link_black popup__link_center">
+            <img src="./assets/images/icon3.svg" alt="" class="popup__icon" />
+            ${phone}
+          </a>
+          <div class="popup__link-box">
             <a href="${link}" target="_blank" class="popup__link popup__link_blue">
-              <img src="./assets/images/icon4.svg" alt="" class="popup__icon" />
+              <img src="./assets/images/link-icon.svg" alt="" class="popup__icon" />
               ${linkText}
-              </p>
+            </a>
             <a href="${instaLink}"
               target="_blank"
               class="popup__link popup__link_blue"
@@ -27,11 +30,11 @@ function generatePopupHtml(props) {
               <img src="./assets/images/icon1.svg" alt="" class="popup__icon" />
               ${instaText}
             </a>
+          </div>
         </div>
       </div>
-      <div class="popup__text">${text}</div>
-        <img src="./assets/logos/New.png" alt="" class="popup__logo" />
-      <img src="./assets/images/stripes.svg" class="popup__stripes" />
+      <img src="./assets/logos/New.png" alt="" class="popup__logo popup__logo_secondary" />
+      <img src="./assets/images/stripes3.png" class="popup__stripes3" />
   `;
 }
 
