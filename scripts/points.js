@@ -1,42 +1,5 @@
 await waitForLoad();
 
-//New points data
-const newPointsFeatures = newPoints.map((p) => {
-  return {
-    type: "Feature",
-    geometry: {
-      type: "Point",
-      coordinates: p.coordinates,
-    },
-    properties: {
-      location: p.location,
-    },
-  };
-});
-
-//New points source
-map.addSource("newpoints", {
-  type: "geojson",
-  data: {
-    type: "FeatureCollection",
-    features: newPointsFeatures,
-  },
-});
-
-// Points
-map.addLayer({
-  id: "new-point",
-  type: "symbol",
-  source: "newpoints",
-  layout: {
-    "icon-image": "pin3",
-    "icon-anchor": "bottom",
-    "icon-allow-overlap": true,
-  },
-});
-
-///////////////////////////////////////////////////////////////////////////////////////////////
-
 const features = [];
 
 mapPointsData.forEach((properties) => {
@@ -73,3 +36,42 @@ map.addLayer({
     "icon-allow-overlap": true,
   },
 });
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+//New points data
+const newPointsFeatures = newPoints.map((p) => {
+  return {
+    type: "Feature",
+    geometry: {
+      type: "Point",
+      coordinates: p.coordinates,
+    },
+    properties: {
+      location: p.location,
+    },
+  };
+});
+
+//New points source
+map.addSource("newpoints", {
+  type: "geojson",
+  data: {
+    type: "FeatureCollection",
+    features: newPointsFeatures,
+  },
+});
+
+// Points
+map.addLayer({
+  id: "new-point",
+  type: "symbol",
+  source: "newpoints",
+  layout: {
+    "icon-image": "pin3",
+    "icon-anchor": "bottom",
+    "icon-allow-overlap": true,
+  },
+});
+
+map.moveLayer("unclustered-point");

@@ -1264,6 +1264,10 @@ const newPoints = [
     coordinates: [-122.3298491823642, 47.62185045743412],
   },
   {
+    location: "Chicago, USA",
+    coordinates: [-87.6298, 41.8781],
+  },
+  {
     location: "San Diego, USA",
     coordinates: [-117.15459571424627, 32.72723365795883],
   },
