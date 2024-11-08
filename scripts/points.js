@@ -43,7 +43,7 @@ const newPointsFeatures = newPoints.map((p) => {
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: p.point,
+      coordinates: p.coordinates,
     },
     properties: {
       location: p.location,
@@ -68,6 +68,5 @@ map.addLayer({
   layout: {
     "icon-image": "pin3",
     "icon-anchor": "bottom",
-    "icon-allow-overlap": true,
   },
 });
