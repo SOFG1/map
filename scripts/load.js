@@ -6,11 +6,7 @@ window.waitForLoad = waitForLoad;
 
 await waitForLoad();
 
-const IS_LOCAL = window.location.port === "5500";
-
-const HOST_URL = IS_LOCAL
-  ? "../"
-  : "https://raw.githubusercontent.com/sofg1/map/main";
+const HOST_URL = "https://raw.githubusercontent.com/sofg1/map/main";
 
 //Load pin images
 map.loadImage(`${HOST_URL}/assets/images/pin1.png`, (err, img) => {
