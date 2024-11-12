@@ -71,6 +71,7 @@ map.addLayer({
     "icon-image": "pin3",
     "icon-anchor": "bottom",
     "icon-allow-overlap": true,
+    "icon-ignore-placement": true,
   },
 });
 
