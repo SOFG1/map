@@ -34,7 +34,7 @@ map.on("load", () => {
   // Add click event listener
   map.on("click", (event) => {
     const clickedPointCoords = [event.lngLat.lng, event.lngLat.lat];
-    // console.log("Point coords: ", clickedPointCoords);
+    console.log("Point coords: ", clickedPointCoords);
 
     // Get the features at the click location
     const features = map.queryRenderedFeatures(event.point, {
@@ -45,10 +45,10 @@ map.on("load", () => {
     if (features.length > 0) {
       const building = features[0];
       // console.log(building);
-      // const coordinates = building.geometry.coordinates;
+      const coordinates = building.geometry.coordinates;
 
-      // console.log("Building:", coordinates);
-      // console.log("Height:", building.properties.height);
+      console.log("Building:", coordinates);
+      console.log("Height:", building.properties.height);
     }
   });
 });

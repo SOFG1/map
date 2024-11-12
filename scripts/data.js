@@ -1208,6 +1208,48 @@ const mapPointsData = [
     points: [[-0.48526630067850757, 38.35342881904687]],
     buildings: [],
   },
+  {
+    title: "Benidorm Mafia",
+    location: "Benidorm, Spain",
+    // telegram: "t.me/MafiaWorld_game_bot",
+    insta: "instagram.com/mafia.costa.blanca",
+    logo: "./assets/logos/Benidorm.jpg",
+    photos: [
+      "./assets/photos/37-1.jpg",
+      "./assets/photos/37-2.png",
+      "./assets/photos/37-3.png",
+    ],
+    points: [[-0.12610154474296004, 38.54187688522619]],
+    buildings: [],
+  },
+  {
+    title: "Pozniaky Mafia",
+    location: "Pozniaky(Kyiv), Ukraine",
+    // telegram: "t.me/MafiaWorld_game_bot",
+    insta: "instagram.com/kievgame",
+    logo: "./assets/logos/Left.jpg",
+    photos: [
+      "./assets/photos/38-1.jpg",
+      "./assets/photos/38-2.png",
+      "./assets/photos/38-3.png",
+    ],
+    points: [[30.609669090038494, 50.403448904141484]],
+    buildings: [
+      {
+        coords: [
+          [
+            [30.609393417835236, 50.403378804335034],
+            [30.6097112596035, 50.40328306761867],
+            [30.609668344259262, 50.403219812896396],
+            [30.609508752822876, 50.40300782348186],
+            [30.60919091105461, 50.40310270595802],
+            [30.609393417835236, 50.403378804335034],
+          ],
+        ],
+        height: 78,
+      },
+    ],
+  },
 ];
 
 const newPoints = [
