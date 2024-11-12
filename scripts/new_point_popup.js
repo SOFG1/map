@@ -1,6 +1,6 @@
 const text =
   "Шукаємо партнерів для відкриття клубу Мафії в цьому чудовому місті 😎";
-const phone = "+38 050 761 96 98";
+const phone = "+380507619698";
 const link = "https://franchise.mafia.events/";
 const linkText = "Franchise.Mafia.Events";
 const instaLink = "https://www.instagram.com/man_of_mafia/";
