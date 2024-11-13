@@ -7,10 +7,22 @@ body {
 .filters {
   position: fixed;
   display: flex;
-  gap: 20px;
-  top: 20px;
-  left: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  top: 10px;
+  left: 10px;
   z-index: 1;
+}
+
+#autoComplete {
+  padding-left: 10px;
+  height: 30px;
+  width: auto !important;
+}
+
+#autoComplete_list_1 {
+  overflow-y: auto;
 }
 
 #map {
@@ -381,5 +393,11 @@ body.swiper-opened .popup__stripes {
 
   body.swiper-opened .popup__slider-btn_right {
     left: calc(100% - 30px);
+  }
+}
+
+@media screen and (max-width: 300px) {
+  #autoComplete {
+    max-width: calc(100vw - 90px) !important;
   }
 }
