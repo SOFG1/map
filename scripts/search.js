@@ -22,6 +22,7 @@ document
     // "event.detail" carries the autoComplete.js "feedback" object
     const val = event.detail.selection.value;
     event.target.value = val;
+    hideKeyboard(event.target);
 
     const option1 = mapPointsData.find((p) => p.location === val);
     if (option1) {
@@ -43,3 +44,14 @@ document
       });
     }
   });
+
+function hideKeyboard(element) {
+  element.attr("readonly", "readonly"); // Force keyboard to hide on input field.
+  element.attr("disabled", "true"); // Force keyboard to hide on textarea field.
+  setTimeout(function () {
+    element.blur(); //actually close the keyboard
+    // Remove readonly attribute after keyboard is hidden.
+    element.removeAttr("readonly");
+    element.removeAttr("disabled");
+  }, 100);
+}
