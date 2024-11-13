@@ -87,10 +87,10 @@ map.on("click", "unclustered-point", (e) => {
     coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
   }
 
-  window.openPopup(e.features[0].properties, coordinates);
+  window.openPopup1(e.features[0].properties, coordinates);
 });
 
-window.openPopup = function (properties, coordinates) {
+window.openPopup1 = function (properties, coordinates) {
   console.log(coordinates);
   console.log(properties);
 

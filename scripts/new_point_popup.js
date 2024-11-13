@@ -47,9 +47,15 @@ map.on("click", "new-point", (e) => {
   while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
     coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
   }
+  openPopup2(e.features[0].properties, coordinates);
+});
 
+window.openPopup2 = function (option, coordinates) {
   window.openedPopup = new mapboxgl.Popup()
     .setLngLat(coordinates)
-    .setHTML(generatePopupHtml(e.features[0].properties))
-    .addTo(map);
-});
+    .setHTML(generatePopupHtml(option))
+    .addTo(map)
+    .on("close", () => {
+      document.querySelector("#autoComplete").value = "";
+    });
+};
