@@ -34,6 +34,8 @@ map.addLayer({
     "icon-image": "pin2",
     "icon-anchor": "bottom",
     "icon-allow-overlap": true,
+    "icon-size": 1, // Make the icon size consistent across zooms
+    "icon-ignore-placement": true, // Prevent the icon from being hidden due to placement restrictions
   },
 });
 
@@ -71,7 +73,8 @@ map.addLayer({
     "icon-image": "pin3",
     "icon-anchor": "bottom",
     "icon-allow-overlap": true,
-    "icon-ignore-placement": true,
+    "icon-size": 1, // Make the icon size consistent across zooms
+    "icon-ignore-placement": true, // Prevent the icon from being hidden due to placement restrictions
   },
 });
 
