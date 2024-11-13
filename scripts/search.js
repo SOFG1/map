@@ -46,12 +46,12 @@ document
   });
 
 function hideKeyboard(element) {
-  element.attr("readonly", "readonly"); // Force keyboard to hide on input field.
-  element.attr("disabled", "true"); // Force keyboard to hide on textarea field.
+  element.setAttribute("readonly", true);
+  element.setAttribute("disabled", true);
   setTimeout(function () {
     element.blur(); //actually close the keyboard
     // Remove readonly attribute after keyboard is hidden.
-    element.removeAttr("readonly");
-    element.removeAttr("disabled");
+    element.removeAttribute("readonly");
+    element.removeAttribute("disabled");
   }, 100);
 }
