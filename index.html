@@ -21,6 +21,12 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- autoComplete.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.9/dist/autoComplete.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.9/dist/css/autoComplete.01.min.css"
+    />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,11 +36,14 @@
     />
   </head>
   <body>
-    <select class="lang-select">
-      <option value="en">ENG</option>
-      <!-- <option value="ua">UA</option> -->
-      <option value="ru">RUS</option>
-    </select>
+    <div class="filters">
+      <select class="lang-select">
+        <option value="en">ENG</option>
+        <!-- <option value="ua">UA</option> -->
+        <option value="ru">RUS</option>
+      </select>
+      <input id="autoComplete" autocomplete="off" />
+    </div>
     <div id="map"></div>
   </body>
   <script src="./scripts/data.js" type="module"></script>
@@ -49,5 +58,6 @@
   <script src="./scripts/country_borders.js" type="module"></script>
   <script src="./scripts/location.js" type="module"></script>
   <script src="./scripts/langauge.js" type="module"></script>
+  <script src="./scripts/search.js" type="module"></script>
   <script src="./scripts/__get_building.js" type="module"></script>
 </html>
