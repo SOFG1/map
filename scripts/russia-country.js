@@ -36331,7 +36331,24 @@ map.getStyle().layers.forEach((layer) => {
   if (layer.id.includes("label")) {
     map.setFilter(layer.id, [
       "all",
-      ["!=", ["get", "iso_3166_1"], "RU"], // Exclude cities in Russia
+      ["!=", ["get", "iso_3166_1"], "RU"], // Exclude features in Russia
+      ["!=", ["get", "iso_3166_1"], "BY"], // Exclude features in Belarus
     ]);
   }
+});
+
+map.addSource("country-boundaries", {
+  type: "vector",
+  url: "mapbox://mapbox.country-boundaries-v1",
+});
+
+map.addLayer({
+  id: "russia-belarus-fill",
+  type: "fill",
+  source: "country-boundaries",
+  "source-layer": "country_boundaries",
+  paint: {
+    "fill-color": "#888", // Grey color
+  },
+  filter: ["==", ["get", "iso_3166_1"], "BY"], // Filter for Russia (RU) and Belarus (BY)
 });
