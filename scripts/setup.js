@@ -9,6 +9,7 @@ const map = new mapboxgl.Map({
   center: [25, 42], // starting position [lng, lat]
   zoom: 2.7,
   pitch: 30,
+  crossSourceCollisions: false,
 });
 
 map.addControl(new mapboxgl.NavigationControl());
