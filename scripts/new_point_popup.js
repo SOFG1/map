@@ -40,6 +40,7 @@ function generatePopupHtml(props) {
 
 // Popup
 map.on("click", "new-point", (e) => {
+  if (window.openedPopup) window.openedPopup.remove(); //Remove popup if there is one
   const coordinates = e.features[0].geometry.coordinates.slice();
 
   // Ensure that if the map is zoomed out such that multiple copies of the feature are visible, the popup appears over the copy being clicked
@@ -47,7 +48,7 @@ map.on("click", "new-point", (e) => {
     coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
   }
 
-  new mapboxgl.Popup()
+  window.openedPopup = new mapboxgl.Popup()
     .setLngLat(coordinates)
     .setHTML(generatePopupHtml(e.features[0].properties))
     .addTo(map);
