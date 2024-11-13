@@ -26,7 +26,9 @@ function generateSlider(photos) {
 }
 
 function generatePopupHtml(props) {
-  const photos = JSON.parse(props.photos);
+  const photos = Array.isArray(props.photos)
+    ? props.photos
+    : JSON.parse(props.photos);
   queueMicrotask(createSwiper); //Create a swiper after render
   return `
       ${
@@ -85,15 +87,23 @@ map.on("click", "unclustered-point", (e) => {
     coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
   }
 
+  window.openPopup(e.features[0].properties, coordinates);
+});
+
+window.openPopup = function (properties, coordinates) {
+  console.log(coordinates);
+  console.log(properties);
+
   window.openedPopup = new mapboxgl.Popup()
     .setLngLat(coordinates)
-    .setHTML(generatePopupHtml(e.features[0].properties))
+    .setHTML(generatePopupHtml(properties))
     .addTo(map)
     .on("close", () => {
       window.swiper?.destroy();
       document.body.classList.remove("swiper-opened");
+      document.querySelector("#autoComplete").value = "";
     });
-});
+};
 
 document.addEventListener("click", (e) => {
   if (e.target.closest(".popup-main-js")) {

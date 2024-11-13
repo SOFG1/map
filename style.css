@@ -18,7 +18,8 @@ body {
 #autoComplete {
   padding-left: 10px;
   height: 30px;
-  width: auto !important;
+  max-width: 270px;
+  background-color: #fff;
 }
 
 #autoComplete_list_1 {
@@ -396,7 +397,7 @@ body.swiper-opened .popup__stripes {
   }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 360px) {
   #autoComplete {
     max-width: calc(100vw - 90px) !important;
   }
