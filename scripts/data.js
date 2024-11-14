@@ -1250,6 +1250,19 @@ const mapPointsData = [
       },
     ],
   },
+  {
+    title: "Manheim Mafia",
+    location: "Manheim, Germany",
+    insta: "instagram.com/mannheim.mafia",
+    logo: "./assets/logos/Manheim.jpg",
+    photos: [
+      "./assets/photos/39-1.jpg",
+      "./assets/photos/39-2.png",
+      "./assets/photos/39-3.png",
+    ],
+    points: [[8.468745815984771, 49.4903729477916]],
+    buildings: [],
+  },
 ];
 
 const newPoints = [
