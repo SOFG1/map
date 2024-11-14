@@ -12,13 +12,18 @@ const map = new mapboxgl.Map({
   crossSourceCollisions: false,
 });
 
+console.log(window.geoCoderList);
+
 const geocoder = new MapboxGeocoder({
   accessToken: mapboxgl.accessToken,
   mapboxgl: mapboxgl,
   marker: true, // Set to true to add a marker for the result
   placeholder: "Пошук", // Customize placeholder text
   flyTo: true,
+  countries: window.geoCoderList.join(","),
 });
+
+console.log(geocoder);
 
 window.geocoder = geocoder;
 
