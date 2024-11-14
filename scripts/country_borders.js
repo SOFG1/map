@@ -27,10 +27,35 @@ map.addLayer({
   },
 });
 
-//Hide all labels inside Russia
+//Make country labels blue
 map.setPaintProperty("country-label", "text-color", [
   "case",
   ["==", ["get", "type"], "country"], // Condition check
   "#242ad4", // Color if condition is true
   ["to-color", ["coalesce", ["get", "text-color"], "#000000"]], // Leave default color if condition is false
 ]);
+
+/////////////////////////////////////////////////////////////////////////// Optional functionality below
+
+//Hide other labels (city, town, village)
+map.setPaintProperty("country-label", "text-opacity", [
+  "case",
+  ["==", ["get", "type"], "country"], // Condition check
+  1, // Color if condition is true
+  0, // Leave default color if condition is false
+]);
+
+map.on("click", function (e) {
+  const features = map.queryRenderedFeatures(e.point);
+
+  if (features.length > 0) {
+    // Log each feature's layer ID
+    features.forEach((feature) => {
+      console.log("Layer ID:", feature.layer.id);
+      console.log("Feature properties:", feature.properties);
+      console.log("Feature geometry:", feature.geometry);
+    });
+  } else {
+    console.log("No features found at the clicked location.");
+  }
+});

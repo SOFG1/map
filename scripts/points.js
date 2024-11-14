@@ -49,9 +49,7 @@ const newPointsFeatures = newPoints.map((p) => {
       type: "Point",
       coordinates: p.coordinates,
     },
-    properties: {
-      location: p.location,
-    },
+    properties: p,
   };
 });
 
@@ -77,5 +75,39 @@ map.addLayer({
     "icon-ignore-placement": true, // Prevent the icon from being hidden due to placement restrictions
   },
 });
+
+map.moveLayer("unclustered-point");
+
+/////////////////////////////////////////////////////////////////////////// Optional functionality below
+
+const text = {
+  "text-field": ["get", "label"],
+  "text-size": 14,
+  "text-font": ["Open Sans SemiBold"],
+  "text-anchor": "top",
+  "text-offset": [0, 0],
+};
+
+map.addLayer({
+  id: "new-points-labels",
+  type: "symbol",
+  source: "newpoints",
+  layout: text,
+  paint: {
+    "text-color": "#000000", // Set text color
+  },
+});
+
+map.addLayer({
+  id: "points-labels",
+  type: "symbol",
+  source: "points",
+  layout: text,
+  paint: {
+    "text-color": "#000000", // Set text color
+  },
+});
+
+map.moveLayer("new-point");
 
 map.moveLayer("unclustered-point");

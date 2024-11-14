@@ -85,6 +85,7 @@ const mapPointsData = [
         height: 3.7,
       },
     ],
+    label: "Dubai",
   },
   {
     title: "Mafia Ivano-Frankivsk Game",
@@ -126,6 +127,7 @@ const mapPointsData = [
         height: 13.1,
       },
     ],
+    label: "Ivano-Frankivsk",
   },
   {
     title: "Mafia Cascais Game",
@@ -165,10 +167,11 @@ const mapPointsData = [
         height: 34.7,
       },
     ],
+    label: "Paço de Arcos",
   },
   {
     title: "Mafia Chernivtsi",
-    location: "Чернівці",
+    location: "Chernivtsi, Ukraine",
     address: "YOKI Герцена 2а",
     phone: "0664832337",
     telegram: "t.me/+Ul9u1sWL9a84ODIy",
@@ -209,6 +212,7 @@ const mapPointsData = [
         height: 3.7,
       },
     ],
+    label: "Chernivtsi",
   },
   {
     title: "Mafia Bratislava",
@@ -245,6 +249,7 @@ const mapPointsData = [
         height: 44.1,
       },
     ],
+    label: "Bratislava",
   },
   {
     title: "Mafia Wien",
@@ -286,6 +291,7 @@ const mapPointsData = [
         height: 16.2,
       },
     ],
+    label: "Wien",
   },
   {
     title: "Mafia Lodz",
@@ -318,6 +324,7 @@ const mapPointsData = [
         height: 3.7,
       },
     ],
+    label: "Lodz",
   },
   {
     title: "Mafia Uzhhorod",
@@ -358,6 +365,7 @@ const mapPointsData = [
         height: 3.7,
       },
     ],
+    label: "Uzhhorod",
   },
   {
     title: "Mafia Poltava",
@@ -391,6 +399,7 @@ const mapPointsData = [
         height: 19.3,
       },
     ],
+    label: "Poltava",
   },
   {
     title: "Mafia Lutsk",
@@ -433,6 +442,7 @@ const mapPointsData = [
         height: 10,
       },
     ],
+    label: "Lutsk",
   },
   {
     title: "Mafia Wien",
@@ -467,6 +477,7 @@ const mapPointsData = [
         height: 8.7,
       },
     ],
+    label: "Wien",
   },
   {
     title: "Lviv Mafia Game",
@@ -505,6 +516,7 @@ const mapPointsData = [
         height: 13.1,
       },
     ],
+    label: "Lviv",
   },
   {
     title: "MAFIA WROCLAW GAME",
@@ -553,6 +565,7 @@ const mapPointsData = [
         height: 19.7,
       },
     ],
+    label: "Wrocław",
   },
   {
     title: "MAFIA MIAMI",
@@ -626,6 +639,7 @@ const mapPointsData = [
         height: 59.6,
       },
     ],
+    label: "MIAMI",
   },
   {
     title: "Mafia Warsaw Game",
@@ -685,6 +699,7 @@ const mapPointsData = [
         height: 19.7,
       },
     ],
+    label: "Warszawa Polska",
   },
   {
     title: "Mafia Khmelnytskyi Game",
@@ -726,6 +741,7 @@ const mapPointsData = [
         height: 28.599999999999998,
       },
     ],
+    label: "Khmelnytskyi",
   },
   {
     title: "MAFIA PRAGUE GAME",
@@ -768,6 +784,7 @@ const mapPointsData = [
         height: 16.2,
       },
     ],
+    label: "Praha",
   },
   {
     title: "Mafia Brody Game",
@@ -801,6 +818,7 @@ const mapPointsData = [
         height: 3.7,
       },
     ],
+    label: "Brody",
   },
   {
     title: "Kremenchuk Mafia",
@@ -840,6 +858,7 @@ const mapPointsData = [
         height: 3.7,
       },
     ],
+    label: "Kremenchuk",
   },
   {
     title: "Polyanytsya Mafia",
@@ -882,6 +901,7 @@ const mapPointsData = [
         height: 3.7,
       },
     ],
+    label: "Polyanytsya",
   },
   {
     title: "Mafia Vinnytsia Game",
@@ -913,6 +933,7 @@ const mapPointsData = [
         height: 3.7,
       },
     ],
+    label: "Vinnytsia",
   },
   {
     title: "MAFIA Romny Game",
@@ -947,6 +968,7 @@ const mapPointsData = [
         height: 3.7,
       },
     ],
+    label: "Romny",
   },
   {
     title: "Mafia Edmonton Game",
@@ -989,6 +1011,7 @@ const mapPointsData = [
         height: 5.6000000000000005,
       },
     ],
+    label: "Edmonton",
   },
   {
     title: "Mafia Wien",
@@ -1004,6 +1027,7 @@ const mapPointsData = [
     ],
     points: [[16.368141138707283, 48.214056602680515]],
     buildings: [],
+    label: "Wien",
   },
   {
     title: "Gdansk Mafia",
@@ -1018,6 +1042,7 @@ const mapPointsData = [
     ],
     points: [[18.647578710233624, 54.35203475872797]],
     buildings: [],
+    label: "Gdansk",
   },
   {
     title: "Los Angeles Mafia",
@@ -1032,6 +1057,7 @@ const mapPointsData = [
     ],
     points: [[-118.24879891110042, 34.06263036971629]],
     buildings: [],
+    label: "Los Angeles",
   },
   {
     title: "Tashkent Mafia",
@@ -1046,6 +1072,7 @@ const mapPointsData = [
     ],
     points: [[69.24063765873603, 41.30011229836161]],
     buildings: [],
+    label: "Tashkent",
   },
   {
     title: "Alicante Mafia",
@@ -1060,6 +1087,7 @@ const mapPointsData = [
     ],
     points: [[-0.490674669312844, 38.34605857436629]],
     buildings: [],
+    label: "Alicante",
   },
   {
     title: "Chornomorsk Mafia",
@@ -1074,6 +1102,7 @@ const mapPointsData = [
     ],
     points: [[30.648483485704443, 46.29510834110766]],
     buildings: [],
+    label: "Chornomorsk",
   },
   {
     title: "Zhytomyr Mafia",
@@ -1088,6 +1117,7 @@ const mapPointsData = [
     ],
     points: [[28.666642242467944, 50.26166209817281]],
     buildings: [],
+    label: "Zhytomyr",
   },
   {
     title: "Kamyanets-Podilskyi Mafia",
@@ -1102,6 +1132,7 @@ const mapPointsData = [
     ],
     points: [[26.58290788754984, 48.69685645648874]],
     buildings: [],
+    label: "Kamyanets-Podilskyi",
   },
   {
     title: "Sumy Mafia",
@@ -1116,6 +1147,7 @@ const mapPointsData = [
     ],
     points: [[34.79820622228515, 50.907634068346276]],
     buildings: [],
+    label: "Sumy",
   },
   {
     title: "Riga Mafia",
@@ -1130,6 +1162,7 @@ const mapPointsData = [
     ],
     points: [[24.10511555492625, 56.96734021535275]],
     buildings: [],
+    label: "Riga",
   },
   {
     title: "London Mafia",
@@ -1144,6 +1177,7 @@ const mapPointsData = [
     ],
     points: [[-0.12766588496868608, 51.50742551908721]],
     buildings: [],
+    label: "London",
   },
   {
     title: "Kyiv Mafia",
@@ -1159,6 +1193,7 @@ const mapPointsData = [
     ],
     points: [[30.52258576525469, 50.450996040521524]],
     buildings: [],
+    label: "Kyiv",
   },
   {
     title: "Valencia Mafia",
@@ -1174,6 +1209,7 @@ const mapPointsData = [
     ],
     points: [[-0.37586371399887336, 39.47513184935206]],
     buildings: [],
+    label: "Valencia",
   },
   {
     title: "Alicante Mafia",
@@ -1188,11 +1224,11 @@ const mapPointsData = [
     ],
     points: [[-0.48526630067850757, 38.35342881904687]],
     buildings: [],
+    label: "Alicante",
   },
   {
     title: "Benidorm Mafia",
     location: "Benidorm, Spain",
-    // telegram: "t.me/MafiaWorld_game_bot",
     insta: "instagram.com/mafia.costa.blanca",
     logo: "./assets/logos/Benidorm.jpg",
     photos: [
@@ -1202,11 +1238,11 @@ const mapPointsData = [
     ],
     points: [[-0.12610154474296004, 38.54187688522619]],
     buildings: [],
+    label: "Benidorm",
   },
   {
     title: "Pozniaky Mafia",
     location: "Pozniaky(Kyiv), Ukraine",
-    // telegram: "t.me/MafiaWorld_game_bot",
     insta: "instagram.com/kievgame",
     logo: "./assets/logos/Left.jpg",
     photos: [
@@ -1230,6 +1266,7 @@ const mapPointsData = [
         height: 78,
       },
     ],
+    label: "Pozniaky(Kyiv)",
   },
   {
     title: "Manheim Mafia",
@@ -1243,6 +1280,7 @@ const mapPointsData = [
     ],
     points: [[8.468745815984771, 49.4903729477916]],
     buildings: [],
+    label: "Manheim",
   },
 ];
 
@@ -1250,94 +1288,117 @@ const newPoints = [
   {
     location: "NEW YORK, USA",
     coordinates: [-73.99802190550197, 40.72109598656931],
+    label: "NEW YORK",
   },
   {
     location: "New Jersey, USA",
     coordinates: [-74.56376332258367, 39.944093393379745],
+    label: "New Jersey",
   },
   {
     location: "Philadelphia, USA",
     coordinates: [-75.16188754634324, 39.99678860230254],
+    label: "Philadelphia",
   },
   {
     location: "Washington, USA",
     coordinates: [-77.03664473166155, 38.907693228770256],
+    label: "Washington",
   },
   {
     location: "San Francisco, USA",
     coordinates: [-122.41587126090624, 37.772439380520844],
+    label: "San Francisco",
   },
   {
     location: "Orlando, USA",
     coordinates: [-81.37632457075732, 28.54563332498515],
+    label: "Orlando",
   },
   {
     location: "Atlanta, USA",
     coordinates: [-84.40537093836684, 33.761346419259155],
+    label: "Atlanta",
   },
   {
     location: "Charleston, USA",
     coordinates: [-79.94202066934312, 32.79742971588239],
+    label: "Charleston",
   },
   {
     location: "Boston, USA",
     coordinates: [-71.06606111344563, 42.35513451146809],
+    label: "Boston",
   },
   {
     location: "Portland, USA",
     coordinates: [-122.67898956869033, 45.518921217223976],
+    label: "Portland",
   },
   {
     location: "San Bernardino, USA",
     coordinates: [-117.30141298824807, 34.11168187697182],
+    label: "San Bernardino",
   },
   {
     location: "Vancouver, USA",
     coordinates: [-123.11866057268311, 49.28011652637711],
+    label: "Vancouver",
   },
   {
     location: "Seattle, USA",
     coordinates: [-122.3298491823642, 47.62185045743412],
+    label: "Seattle",
   },
   {
     location: "Chicago, USA",
     coordinates: [-87.6298, 41.8781],
+    label: "Chicago",
   },
   {
     location: "San Diego, USA",
     coordinates: [-117.15459571424627, 32.72723365795883],
+    label: "San Diego",
   },
   {
     location: "Dnipro, Ukraine",
     coordinates: [35.05034839262487, 48.49497617183832],
+    label: "Dnipro",
   },
   {
     location: "Kropyvnytskyi, Ukraine",
     coordinates: [32.2612, 48.5224],
+    label: "Kropyvnytskyi",
   },
   {
     location: "Uman, Ukraine",
     coordinates: [30.2219, 48.7679],
+    label: "Uman",
   },
   {
     location: "Cherkasy, Ukraine",
     coordinates: [32.0591041578744, 49.44847907901547],
+    label: "Cherkasy",
   },
   {
     location: "Bila Tserkva, Ukraine",
     coordinates: [30.1176, 49.823],
+    label: "Bila Tserkva",
   },
   {
     location: "Boryspil, Ukraine",
     coordinates: [30.9558, 50.3663],
+    label: "Boryspil",
   },
   {
     location: "Vyshhorod, Ukraine",
     coordinates: [30.4965, 50.5933],
+    label: "Vyshhorod",
   },
   {
     location: "Ternopil, Ukraine",
     coordinates: [25.592, 49.565],
+    label: "Ternopil",
   },
 ];
 
