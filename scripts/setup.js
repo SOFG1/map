@@ -25,7 +25,9 @@ const geocoder = new MapboxGeocoder({
 
 console.log(geocoder);
 
-window.geocoder = geocoder;
+geocoder.on("result", function (e) {
+  hideKeyboard(document.querySelector(".mapboxgl-ctrl-geocoder--input"));
+});
 
 // Add the geocoder to the map
 map.addControl(geocoder);
@@ -47,3 +49,14 @@ document
   .addEventListener("click", () => {
     map.zoomTo(map.getZoom() - 3); // Adjust step as needed
   });
+
+function hideKeyboard(element) {
+  element.setAttribute("readonly", true);
+  element.setAttribute("disabled", true);
+  setTimeout(function () {
+    element.blur(); //actually close the keyboard
+    // Remove readonly attribute after keyboard is hidden.
+    element.removeAttribute("readonly");
+    element.removeAttribute("disabled");
+  }, 100);
+}
