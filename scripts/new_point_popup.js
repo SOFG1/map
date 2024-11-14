@@ -54,8 +54,5 @@ window.openPopup2 = function (option, coordinates) {
   window.openedPopup = new mapboxgl.Popup()
     .setLngLat(coordinates)
     .setHTML(generatePopupHtml(option))
-    .addTo(map)
-    .on("close", () => {
-      document.querySelector("#autoComplete").value = "";
-    });
+    .addTo(map);
 };

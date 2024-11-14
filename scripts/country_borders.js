@@ -35,14 +35,16 @@ map.setPaintProperty("country-label", "text-color", [
   ["to-color", ["coalesce", ["get", "text-color"], "#000000"]], // Leave default color if condition is false
 ]);
 
-/////////////////////////////////////////////////////////////////////////// Optional functionality below
+map.setLayoutProperty("settlement-major-label", "visibility", "none");
+map.setLayoutProperty("settlement-minor-label", "visibility", "none");
 
 //Hide other labels (city, town, village)
+
 map.setPaintProperty("country-label", "text-opacity", [
   "case",
-  ["==", ["get", "type"], "country"], // Condition check
-  1, // Color if condition is true
-  0, // Leave default color if condition is false
+  ["any", ["==", ["get", "type"], "country"], ["==", ["get", "type"], "city"]],
+  ["coalesce", ["get", "text-opacity"], 1],
+  0,
 ]);
 
 map.on("click", function (e) {
@@ -59,3 +61,5 @@ map.on("click", function (e) {
     console.log("No features found at the clicked location.");
   }
 });
+
+map.setLayoutProperty("country-label", "text-allow-overlap", false);

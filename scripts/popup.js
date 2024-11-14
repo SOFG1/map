@@ -101,7 +101,6 @@ window.openPopup1 = function (properties, coordinates) {
     .on("close", () => {
       window.swiper?.destroy();
       document.body.classList.remove("swiper-opened");
-      document.querySelector("#autoComplete").value = "";
     });
 };
 
