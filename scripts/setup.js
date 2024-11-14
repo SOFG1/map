@@ -23,7 +23,7 @@ const geocoder = new MapboxGeocoder({
   countries: window.geoCoderList.join(","),
 });
 
-console.log(geocoder);
+window.geocoder = geocoder;
 
 geocoder.on("result", function (e) {
   hideKeyboard(document.querySelector(".mapboxgl-ctrl-geocoder--input"));
