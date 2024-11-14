@@ -1282,6 +1282,20 @@ const mapPointsData = [
     buildings: [],
     label: "Manheim",
   },
+  {
+    title: "Chicago Mafia",
+    location: "Chicago, USA",
+    insta: "instagram.com/mafia.chicago.game",
+    logo: "./assets/logos/Chicago.jpg",
+    photos: [
+      "./assets/photos/40-1.jpg",
+      "./assets/photos/40-2.jpg",
+      "./assets/photos/40-3.jpg",
+    ],
+    points: [[-87.83470251390135, 41.89465819836872]],
+    buildings: [],
+    label: "Chicago",
+  },
 ];
 
 const newPoints = [

@@ -6,7 +6,7 @@ if ("geolocation" in navigator) {
       map.easeTo({
         center: [longitude, latitude],
         // center: newPoints.at(-6).coordinates,
-        // zoom: 9,
+        // zoom: 11,
       });
     },
     (error) => {
