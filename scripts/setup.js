@@ -12,28 +12,18 @@ const map = new mapboxgl.Map({
   crossSourceCollisions: false,
 });
 
-console.log(window.MapboxGeocoder);
-
-// Add the Geocoder control
 const geocoder = new MapboxGeocoder({
   accessToken: mapboxgl.accessToken,
   mapboxgl: mapboxgl,
-  marker: false, // Set to true to add a marker for the result
-  placeholder: "Search for places", // Customize placeholder text
+  marker: true, // Set to true to add a marker for the result
+  placeholder: "Пошук", // Customize placeholder text
+  flyTo: true,
 });
+
+window.geocoder = geocoder;
 
 // Add the geocoder to the map
 map.addControl(geocoder);
-
-// Optional: Use the result event to do something when a location is found
-geocoder.on("result", (e) => {
-  console.log("Found location:", e.result);
-  // Center the map on the searched location
-  map.flyTo({
-    center: e.result.center,
-    zoom: 12,
-  });
-});
 
 map.addControl(new mapboxgl.NavigationControl());
 
