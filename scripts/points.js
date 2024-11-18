@@ -115,7 +115,9 @@ map.moveLayer("unclustered-point");
 const popup = new mapboxgl.Popup({
   closeButton: false,
   closeOnClick: false,
+  offset: [0, -30],
   className: "location-popup",
+  anchor: "bottom",
 });
 
 function addLocationPopup(e) {
@@ -145,4 +147,4 @@ map.on("mouseleave", "new-point", () => {
 });
 
 map.on("click", popup.remove);
-map.on("move", popup.remove);
+// map.on("move", popup.remove);
