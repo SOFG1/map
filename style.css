@@ -301,6 +301,8 @@ body.swiper-opened .popup__stripes {
 
   .location-popup .mapboxgl-popup-content {
     width: auto !important;
+    font-size: 20px;
+    padding: 10px;
   }
 
   .popup__img {
