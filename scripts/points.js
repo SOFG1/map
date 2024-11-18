@@ -109,3 +109,35 @@ const text = {
 map.moveLayer("new-point");
 
 map.moveLayer("unclustered-point");
+
+////Hover effect
+
+const popup = new mapboxgl.Popup({
+  closeButton: false,
+  closeOnClick: false,
+  className: "location-popup",
+});
+
+function addLocationPopup(e) {
+  // Get the feature properties
+  const properties = e.features[0].properties;
+
+  // Set the popup content and position
+  popup
+    .setLngLat(e.lngLat)
+    .setHTML(`<strong>${properties.label}</strong>`) // Adjust to your property
+    .addTo(map);
+}
+
+// Add mousemove event
+map.on("mousemove", "unclustered-point", addLocationPopup);
+map.on("mousemove", "new-point", addLocationPopup);
+
+// Remove the popup when the mouse leaves the layer
+map.on("mouseleave", "unclustered-point", () => {
+  popup.remove();
+});
+
+map.on("mouseleave", "new-point", () => {
+  popup.remove();
+});
