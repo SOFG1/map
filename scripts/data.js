@@ -445,7 +445,7 @@ const mapPointsData = [
     label: "Lutsk",
   },
   {
-    title: "Клуб Игры Мафия №1",
+    title: "Mafia Game Club #1",
     location: "Wien, Austria",
     address:
       "Рестораны Buffalino, Gersthofer Str. 21 & Odessa, Schnirchgasse 11 ",
