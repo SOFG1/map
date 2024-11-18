@@ -131,7 +131,9 @@ function addLocationPopup(e) {
 
 // Add mousemove event
 map.on("mousemove", "unclustered-point", addLocationPopup);
+map.on("touchstart", "unclustered-point", addLocationPopup);
 map.on("mousemove", "new-point", addLocationPopup);
+map.on("touchstart", "new-point", addLocationPopup);
 
 // Remove the popup when the mouse leaves the layer
 map.on("mouseleave", "unclustered-point", () => {
@@ -141,3 +143,6 @@ map.on("mouseleave", "unclustered-point", () => {
 map.on("mouseleave", "new-point", () => {
   popup.remove();
 });
+
+map.on("click", popup.remove);
+map.on("move", popup.remove);
