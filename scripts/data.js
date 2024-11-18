@@ -445,7 +445,7 @@ const mapPointsData = [
     label: "Lutsk",
   },
   {
-    title: "Mafia Wien",
+    title: "Клуб Игры Мафия №1",
     location: "Wien, Austria",
     address:
       "Рестораны Buffalino, Gersthofer Str. 21 & Odessa, Schnirchgasse 11 ",
@@ -1014,7 +1014,7 @@ const mapPointsData = [
     label: "Edmonton",
   },
   {
-    title: "Mafia Wien",
+    title: "Wien Mafia by @sivashkaterina",
     location: "Wien, Austria",
     telegram: "t.me/mafia_vienna",
     insta: "instagram.com/mafia.wien.game",
