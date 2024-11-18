@@ -47,19 +47,4 @@ map.setPaintProperty("country-label", "text-opacity", [
   0,
 ]);
 
-map.on("click", function (e) {
-  const features = map.queryRenderedFeatures(e.point);
-
-  if (features.length > 0) {
-    // Log each feature's layer ID
-    features.forEach((feature) => {
-      console.log("Layer ID:", feature.layer.id);
-      console.log("Feature properties:", feature.properties);
-      console.log("Feature geometry:", feature.geometry);
-    });
-  } else {
-    console.log("No features found at the clicked location.");
-  }
-});
-
 map.setLayoutProperty("country-label", "text-allow-overlap", false);

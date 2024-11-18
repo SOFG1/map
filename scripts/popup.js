@@ -91,9 +91,6 @@ map.on("click", "unclustered-point", (e) => {
 });
 
 window.openPopup1 = function (properties, coordinates) {
-  console.log(coordinates);
-  console.log(properties);
-
   window.openedPopup = new mapboxgl.Popup()
     .setLngLat(coordinates)
     .setHTML(generatePopupHtml(properties))

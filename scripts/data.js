@@ -1703,17 +1703,3 @@ const geoCoderList = [
 window.geoCoderList = geoCoderList;
 window.mapPointsData = mapPointsData;
 window.newPoints = newPoints;
-
-// console.log(mapPointsData);
-
-// function renderLogos() {
-//   mapPointsData.forEach((p) => {
-//     const img = document.createElement("img");
-//     img.src = p.logo;
-//     img.alt = p.title;
-//     const html = `<img src="${p.logo}" alt="${p.title}" />`;
-//     document.body.prepend(img);
-//   });
-// }
-
-// renderLogos();
