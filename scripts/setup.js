@@ -12,8 +12,6 @@ const map = new mapboxgl.Map({
   crossSourceCollisions: false,
 });
 
-console.log(window.geoCoderList);
-
 const geocoder = new MapboxGeocoder({
   accessToken: mapboxgl.accessToken,
   mapboxgl: mapboxgl,
