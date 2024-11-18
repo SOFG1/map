@@ -1305,6 +1305,7 @@ const mapPointsData = [
     insta: "instagram.com/odesa.mafia",
     text: "Клуб, який єднає людей 💛💙 Граємо кожну Ср, Сб та Нд в найкращих ресторанах міста. Будемо раді бачити саме тебе!",
     logo: "./assets/logos/Odesa.jpg",
+    label: "Odesa",
     photos: [
       "./assets/photos/41-1.jpg",
       "./assets/photos/41-2.jpg",
@@ -1343,7 +1344,6 @@ const mapPointsData = [
         height: 9.3,
       },
     ],
-    label: "Chicago",
   },
 ];
 
