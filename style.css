@@ -303,6 +303,11 @@ body.swiper-opened .popup__stripes {
     width: auto !important;
     font-size: 20px;
     padding: 10px;
+    margin-bottom: 40px !important;
+  }
+
+  .location-popup .mapboxgl-popup-tip {
+    display: none;
   }
 
   .popup__img {
