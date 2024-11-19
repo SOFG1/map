@@ -3,13 +3,15 @@ function generateSlider(photos) {
       <div class="slider-wrapper">
       <div class="swiper">
         <div class="swiper-wrapper">
-        ${photos.map(
-          (p) => `
+        ${photos
+          .map(
+            (p) => `
           <div class="swiper-slide">
             <img src="${p}" alt="photo" />
           </div>
           `
-        )}
+          )
+          .join("")}
         </div>
       </div>
       <button class="popup__slider-btn popup__slider-btn_left">
@@ -25,17 +27,42 @@ function generateSlider(photos) {
     `;
 }
 
+function generateMiniSwiper(photos) {
+  setTimeout(() => {
+    window.miniSwiper = new Swiper(".mini-swiper", {
+      centeredSlides: true,
+      loop: true,
+      spaceBetween: 15,
+      autoplay: {
+        delay: 2000,
+        pauseOnMouseEnter: true,
+      },
+      speed: 1000,
+    });
+  }, 400);
+  return `
+  <div class="mini-swiper">
+    <div class="swiper-wrapper">
+    ${photos
+      .map(
+        (p, i) => `<div class="swiper-slide">
+        <img src="${p}" alt="image" class="popup-main-js" data-index="${i}" />
+      </div>`
+      )
+      .join("")}
+    </div>
+  </div>
+`;
+}
+
 function generatePopupHtml(props) {
   const photos = Array.isArray(props.photos)
     ? props.photos
     : JSON.parse(props.photos);
   queueMicrotask(createSwiper); //Create a swiper after render
   return `
-      ${
-        photos[0]
-          ? `<img src="${photos[0]}" alt="image" class="popup__img popup-main-js" />`
-          : ""
-      }
+
+      ${generateMiniSwiper(photos)}
       <div class="popup__box">
         <div class="popup__content">
           <p class="popup__title">${props.title}</p>
@@ -97,12 +124,17 @@ window.openPopup1 = function (properties, coordinates) {
     .addTo(map)
     .on("close", () => {
       window.swiper?.destroy();
+      window.miniSwiper?.destroy();
       document.body.classList.remove("swiper-opened");
     });
 };
 
 document.addEventListener("click", (e) => {
   if (e.target.closest(".popup-main-js")) {
+    const index = e.target.getAttribute("data-index");
+    setTimeout(() => {
+      window.swiper?.slideTo(index);
+    }, 100);
     window.openSwiper();
   }
 });
