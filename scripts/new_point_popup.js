@@ -8,7 +8,7 @@ const instaText = "man_of_mafia";
 
 function generatePopupHtml(props) {
   return `
-      <img src="./assets/images/stripes2.png" class="popup__stripes2" />
+      <img src="./assets/images/stripes2.png" class="popup__stripes" />
       <img src="./assets/images/new-point-photo.png" alt="image" class="popup__img popup__img_secondary" />
       <div class="popup__box popup__box_secondary">
         <div class="popup__content popup__content_secondary">
@@ -35,6 +35,11 @@ function generatePopupHtml(props) {
       </div>
       <img src="./assets/logos/New.png" alt="" class="popup__logo popup__logo_secondary" />
       <img src="./assets/images/stripes3.png" class="popup__stripes3" />
+      ${window.generateMarque("marque3 marque_secondary")}
+      ${window.generateMarque("marque4 marque_secondary")}
+      ${window.generateMarque("marque5 marque_secondary")}
+      ${window.generateMarque("marque6 marque_secondary")}
+
   `;
 }
 

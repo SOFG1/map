@@ -35,8 +35,9 @@ function generateMiniSwiper(photos) {
       spaceBetween: 15,
       autoplay: {
         delay: 2000,
-        pauseOnMouseEnter: true,
+        disableOnInteraction: false,
       },
+      pauseOnInteraction: false,
       speed: 1000,
     });
   }, 400);
@@ -100,7 +101,8 @@ function generatePopupHtml(props) {
       </div>
       ${props.text ? `<div class="popup__text">${props.text}</div>` : ""}
       ${generateSlider(photos)}
-      <img src="./assets/images/stripes.svg" class="popup__stripes" />
+      ${window.generateMarque("marque1")}
+      ${window.generateMarque("marque2")}
   `;
 }
 
@@ -126,7 +128,6 @@ window.openPopup1 = function (properties, coordinates) {
     .addTo(map)
     .on("close", () => {
       window.swiper?.destroy();
-      window.miniSwiper?.destroy();
       document.body.classList.remove("swiper-opened");
     });
 };

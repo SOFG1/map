@@ -34,7 +34,7 @@ body {
 }
 
 .primary-popup {
-  animation: fadeIn 600ms ease-out forwards;
+  animation: fadeIn 700ms ease-out forwards;
 }
 
 .mapboxgl-popup-content {
@@ -230,16 +230,83 @@ body {
   width: 15px;
 }
 
-.popup__stripes {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 120px;
-  pointer-events: none;
-  z-index: 1;
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-3420px);
+  }
 }
 
-.popup__stripes2 {
+.marquee {
+  position: absolute;
+  width: 300px;
+  min-width: 300px;
+  display: flex;
+  gap: 20px;
+  background-color: #fde508;
+  font-weight: 800;
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: 2px;
+  font-family: Tahoma, sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.marque_secondary {
+  font-size: 8px;
+  line-height: 1.1;
+  background-color: #08fd19;
+  letter-spacing: 0;
+}
+
+.marquee-content {
+  animation: scroll 60s linear infinite;
+  display: inline-block;
+  margin: 0;
+}
+
+.marque1 {
+  top: 30px;
+  left: 70px;
+  transform: rotate(42deg);
+  z-index: 9;
+}
+
+.marque2 {
+  top: 30px;
+  left: 70px;
+  transform: rotate(20deg);
+  z-index: 10;
+}
+
+.marque3 {
+  transform: rotate(20deg);
+  left: -10px;
+  bottom: -11px;
+}
+
+.marque4 {
+  transform: rotate(44deg);
+  left: -61px;
+  bottom: -15px;
+}
+
+.marque5 {
+  transform: rotate(-44deg);
+  right: -55px;
+  bottom: -15px;
+}
+
+.marque6 {
+  transform: rotate(-20deg);
+  right: -55px;
+  bottom: 10pxpx;
+}
+
+.popup__stripes {
   position: absolute;
   top: 0;
   left: 0;
@@ -411,14 +478,6 @@ body.swiper-opened .popup__stripes {
   .popup__icon {
     height: 12px;
     width: 12px;
-  }
-
-  .popup__stripes {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 90px;
-    pointer-events: none;
   }
 
   /* Styles when swiper opened */
