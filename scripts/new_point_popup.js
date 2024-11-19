@@ -51,7 +51,9 @@ map.on("click", "new-point", (e) => {
 });
 
 window.openPopup2 = function (option, coordinates) {
-  window.openedPopup = new mapboxgl.Popup()
+  window.openedPopup = new mapboxgl.Popup({
+    className: "primary-popup",
+  })
     .setLngLat(coordinates)
     .setHTML(generatePopupHtml(option))
     .addTo(map);

@@ -24,6 +24,19 @@ body {
   width: 100vw;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.primary-popup {
+  animation: fadeIn 600ms ease-out forwards;
+}
+
 .mapboxgl-popup-content {
   position: relative;
   width: 300px;
