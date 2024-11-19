@@ -448,6 +448,10 @@ body.swiper-opened .popup__stripes {
     border-radius: 7px !important;
   }
 
+  .legend {
+    top: 68px;
+  }
+
   .location-popup .mapboxgl-popup-content {
     width: auto !important;
     min-width: 50px;
