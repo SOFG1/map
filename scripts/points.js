@@ -147,4 +147,3 @@ map.on("mouseleave", "new-point", () => {
 });
 
 map.on("click", popup.remove);
-// map.on("move", popup.remove);

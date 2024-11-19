@@ -413,6 +413,16 @@ body.swiper-opened .popup__stripes {
     border-radius: 5px;
   }
 
+  .marque1 {
+    top: 40px;
+    left: 50px;
+  }
+
+  .marque2 {
+    top: 40px;
+    left: 70px;
+  }
+
   .mini-swiper {
     border-radius: 5px;
   }

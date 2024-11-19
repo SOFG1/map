@@ -34,12 +34,10 @@ function generatePopupHtml(props) {
         </div>
       </div>
       <img src="./assets/logos/New.png" alt="" class="popup__logo popup__logo_secondary" />
-      <img src="./assets/images/stripes3.png" class="popup__stripes3" />
       ${window.generateMarque("marque3 marque_secondary")}
       ${window.generateMarque("marque4 marque_secondary")}
       ${window.generateMarque("marque5 marque_secondary")}
       ${window.generateMarque("marque6 marque_secondary")}
-
   `;
 }
 
