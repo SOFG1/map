@@ -4,7 +4,7 @@ const select = document.querySelector(".lang-select");
 
 const legendLabels = {
   en: ["Opened clubs", "For franchisee"],
-  ru: ["Відкриті клуби", "В планах"],
+  ru: ["Відкриті клуби", "У планах"],
 };
 
 select.addEventListener("change", (e) => {
