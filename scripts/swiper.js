@@ -10,6 +10,7 @@ function createSwiper() {
   swiper.on("click", (e) => {
     const opened = document.body.classList.contains("swiper-opened");
     if (opened) {
+      e.stopPropagation();
       swiper.params.slidesPerView = 3;
       swiper.params.gap = 8;
       swiper.params.loop = false;
