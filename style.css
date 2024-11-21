@@ -2,6 +2,21 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  overflow: hidden;
+  max-height: 100vh;
+}
+
+.title {
+  position: absolute;
+  bottom: 25px;
+  left: 20px;
+  z-index: 10;
+  font-family: "Jomhuria", sans-serif;
+  font-size: 70px;
+  line-height: 0.5;
+  letter-spacing: 3px;
+  margin: 0;
+  text-shadow: 2px 2px 25px #fff;
 }
 
 .filters {
@@ -443,6 +458,11 @@ body.swiper-opened .popup__stripes {
 /***************************** Media 470px  **********************************/
 
 @media screen and (max-width: 470px) {
+  .title {
+    font-size: 50px;
+    left: 10px;
+    bottom: 30px;
+  }
   .mapboxgl-popup-content {
     width: 240px !important;
     border-radius: 7px !important;
