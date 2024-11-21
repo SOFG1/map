@@ -29,7 +29,8 @@ function generateSlider(photos) {
 
 function generateMiniSwiper(photos) {
   setTimeout(() => {
-    window.miniSwiper = new Swiper(".mini-swiper", {
+    new Swiper(".mini-swiper", {
+      allowTouchMove: false,
       centeredSlides: true,
       loop: true,
       spaceBetween: 15,
