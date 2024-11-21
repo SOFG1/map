@@ -29,7 +29,7 @@ function generateSlider(photos) {
 
 function generateMiniSwiper(photos) {
   setTimeout(() => {
-    new Swiper(".mini-swiper", {
+    window.miniSwiper = new Swiper(".mini-swiper", {
       allowTouchMove: false,
       centeredSlides: true,
       loop: true,

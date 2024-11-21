@@ -14,6 +14,9 @@ function createSwiper() {
       swiper.params.gap = 8;
       swiper.params.loop = false;
       document.body.classList.remove("swiper-opened");
+      setTimeout(() => {
+        window.miniSwiper?.slideTo(0);
+      }, 2000);
     }
     if (!opened) {
       window.openSwiper();
