@@ -25,4 +25,9 @@ select.addEventListener("change", (e) => {
   //Switch legend labels
   const labels = document.querySelectorAll(".legend__text");
   labels.forEach((l, i) => (l.textContent = legendLabels[lang][i]));
+
+  //Switch title language
+  const title = document.querySelector(".title");
+  title.innerText =
+    lang === "en" ? "Mafia World Game" : "Мережа клубів з гри Мафія";
 });
