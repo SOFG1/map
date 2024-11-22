@@ -1345,6 +1345,20 @@ const mapPointsData = [
       },
     ],
   },
+  {
+    title: "Rivne Mafia",
+    location: "Rivne, Ukraine",
+    insta: "instagram.com/mafia.rivne",
+    logo: "./assets/logos/Rivne.jpg",
+    photos: [
+      "./assets/photos/42-1.jpg",
+      "./assets/photos/42-2.jpg",
+      "./assets/photos/42-3.png",
+    ],
+    points: [[26.25026137825863, 50.619624685833486]],
+    buildings: [],
+    label: "Rivne",
+  },
 ];
 
 const newPoints = [
